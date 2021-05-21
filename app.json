@@ -2,7 +2,11 @@
   "pages": [
     "pages/index/index",
     "pages/history/history",
-    "pages/user/user"
+    "pages/user/user",
+    "pages/user/feedback/feedback",
+    "pages/user/statisic/statisic",
+    "pages/user/tip/tip",
+    "pages/user/userinfo/userinfo"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -10,24 +14,27 @@
     "navigationBarTitleText": "智能电化学荧光分析",
     "navigationBarTextStyle": "black"
   },
-  "style": "v2",
   "sitemapLocation": "sitemap.json",
   "tabBar": {
-    "list": [{
-      "pagePath": "pages/index/index",
-      "text": "主页",
-      "iconPath": "/assets/index.png",
-      "selectedIconPath": "/assets/index2.png"
-    },{
-      "pagePath": "pages/history/history",
-      "text": "历史",
-      "iconPath": "/assets/history.png",
-      "selectedIconPath": "/assets/history2.png"
-    },{
-      "pagePath": "pages/user/user",
-      "text": "用户",
-      "iconPath": "/assets/user.png",
-      "selectedIconPath": "/assets/user2.png"
-    }]
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "主页",
+        "iconPath": "/assets/index.png",
+        "selectedIconPath": "/assets/index2.png"
+      },
+      {
+        "pagePath": "pages/history/history",
+        "text": "历史",
+        "iconPath": "/assets/history.png",
+        "selectedIconPath": "/assets/history2.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "用户",
+        "iconPath": "/assets/user.png",
+        "selectedIconPath": "/assets/user2.png"
+      }
+    ]
   }
 }

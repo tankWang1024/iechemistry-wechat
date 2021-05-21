@@ -1,0 +1,17 @@
+/* pages/user/statisic/statisic.wxss */
+.result-cell {
+  margin-top: 60rpx;
+}
+
+.value-custom-class {
+  color: black;
+}
+
+.border-green {
+  height: 8rpx;
+  border-radius: 0rpx;
+  border-radius: 0rpx;
+  background: linear-gradient(145deg, #07d267, #06b056);
+  box-shadow:  2rpx 2rpx 4rpx #7ee7af,
+               -2rpx -2rpx 4rpx #09f578;
+}

@@ -1,0 +1,35 @@
+<!--pages/user/statisic/statisic.wxml-->
+<view>
+  <van-cell-group title="最近实验">
+    <van-cell title="试管一号" value="2001.04.01" />
+    <van-cell title="试管二号" value="2001.04.05" />
+  </van-cell-group>
+  <view class="border-green"></view>
+  <van-cell-group title="一共进行了：" value-class="value-custom-class">
+    <van-cell title="">
+      <view slot="title">
+        <view class="van-cell-text">5组实验</view>
+      </view>
+    </van-cell>
+    <van-cell title="">
+      <view slot="title">
+        <view class="van-cell-text">40根试管</view>
+      </view>
+    </van-cell>
+    <van-cell title="">
+      <view slot="title">
+        <view class="van-cell-text">60个选区</view>
+      </view>
+    </van-cell>
+    <van-cell title="">
+      <view slot="title">
+        <view class="van-cell-text">实验了7天</view>
+      </view>
+    </van-cell>
+    <van-cell title="">
+      <view slot="title">
+        <view class="van-cell-text">相当于做了七天实验</view>
+      </view>
+    </van-cell>
+  </van-cell-group>
+</view>

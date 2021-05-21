@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "打赏作者",
+  "usingComponents": {
+    "van-image": "@vant/weapp/image/index"
+  }
+}

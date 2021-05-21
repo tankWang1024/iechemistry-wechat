@@ -1,0 +1,10 @@
+<!--components/user/title/index.wxml-->
+<!-- 头像+欢迎组件 -->
+<view style="padding:30rpx 42rpx;">
+  <view class="user-title-container">
+  <van-image show-menu-by-longpress="true" round width="150rpx" fit="cover" height="150rpx" src="https://img.yzcdn.cn/vant/cat.jpeg" />
+  <view class="welcome-content">
+    欢迎你 xxx
+  </view>
+</view>
+</view>
