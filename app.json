@@ -6,7 +6,10 @@
     "pages/user/feedback/feedback",
     "pages/user/statisic/statisic",
     "pages/user/tip/tip",
-    "pages/user/userinfo/userinfo"
+    "pages/user/userinfo/userinfo",
+    "pages/index/result/result",
+    "pages/index/takePhoto/takePhoto"
+    
   ],
   "window": {
     "backgroundTextStyle": "light",

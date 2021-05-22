@@ -1,11 +1,12 @@
-// pages/history/history.js
+// pages/index/takePhoto/takePhoto.js
+var {uploadImg} = require("../../../utils/util")
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    show:false
   },
 
   /**
@@ -25,8 +26,8 @@ Page({
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow(){
-    // this.getTabBar().init();
+  onShow: function () {
+
   },
 
   /**
@@ -62,5 +63,32 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  takePhoto() {
+    const ctx = wx.createCameraContext()
+    ctx.takePhoto({
+      quality: 'high',
+      success: (res) => {
+        console.log(res)
+        wx.navigateTo({
+          url: '/pages/index/result/result?picUrl='+res.tempImagePath,
+        })
+        this.setData({
+          src: res.tempImagePath
+        })
+      }
+    })
+  },
+  error(e) {
+    console.log(e.detail)
+  },
+  getMore(){
+    console.log(123)
+    this.setData({
+      show:!this.data.show
+    })
+  },
+  uploadImg(){
+   uploadImg()
   }
 })

@@ -39,7 +39,7 @@
     "minifyWXSS": true
   },
   "compileType": "miniprogram",
-  "libVersion": "2.0.4",
+  "libVersion": "2.17.0",
   "appid": "wx1e55a5666300f7e0",
   "projectname": "iechemistry",
   "debugOptions": {

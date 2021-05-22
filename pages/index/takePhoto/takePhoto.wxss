@@ -1,0 +1,36 @@
+/* pages/index/takePhoto/takePhoto.wxss */
+page{
+  height: 100%;
+}
+.cover-take-photo{
+  z-index: 3;
+  position: absolute;
+  /* top: 20px; */
+  color: white;
+  width: 100rpx;
+  height: 100rpx;
+  bottom: 100rpx;
+  /* top: 600rpx; */
+  left: 50%;
+  transform: translateX(-50%);
+}
+.cover-take-more{
+  z-index: 10;
+  position: absolute;
+  top: 40rpx;
+  right: 40rpx;
+  width: 60rpx;
+  height: 60rpx;
+}
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.block {
+  width: 120px;
+  height: 120px;
+  background-color: #fff;
+}

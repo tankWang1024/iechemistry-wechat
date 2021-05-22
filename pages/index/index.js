@@ -1,7 +1,7 @@
 // index.js
 // 获取应用实例
 const app = getApp()
-
+var {uploadImg} = require("../../utils/util")
 Page({
   data: {
     motto: 'Hello World',
@@ -12,11 +12,11 @@ Page({
     canIUseOpenData: wx.canIUse('open-data.type.userAvatarUrl') && wx.canIUse('open-data.type.userNickName') // 如需尝试获取用户信息可改为false
   },
   // 事件处理函数
-  bindViewTap() {
-    wx.navigateTo({
-      url: '../logs/logs'
-    })
-  },
+  // bindViewTap() {
+  //   wx.navigateTo({
+  //     url: '../logs/logs'
+  //   })
+  // },
   onLoad() {
     if (wx.getUserProfile) {
       this.setData({
@@ -25,7 +25,7 @@ Page({
     }
     console.log('嘿嘿')
     wx.login({
-      success (res) {
+      success(res) {
         if (res.code) {
           console.log(res.code)
         } else {
@@ -54,5 +54,16 @@ Page({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
     })
+  },
+  click() {
+    wx.navigateTo({
+      url: '/pages/index/takePhoto/takePhoto',
+    })
+  },
+  onShow() {
+    // this.getTabBar().init();
+  },
+  imgupload(e) {
+    uploadImg()
   }
 })
