@@ -6,9 +6,6 @@
   transform: rotate(270deg);
   /* transform-origin: left top; */
 }
-.small-label{
-  width: 100rpx;
-}
 .big-width{
   width: 200rpx;
 }

@@ -91,5 +91,10 @@ Page({
         console.log(err)
       }
     })
+  },
+  retake(){
+    wx.navigateTo({
+      url: '/pages/index/takePhoto/takePhoto',
+    })
   }
 })
