@@ -1,0 +1,15 @@
+<!--components/index/pictureblock/index.wxml-->
+<view class="pic-block">
+  <view class="pic-view">
+    <van-image width="150rpx" height="100" fit="contain" src="/assets/obj0001.jpg" />
+    <van-image width="150rpx" height="100" fit="contain" src="/assets/region0001.jpg" />
+  </view>
+  <van-cell-group>
+    <van-field input-class="input-class" value="{{ value1 }}" readonly placeholder="请输入用户名" border="{{ false }}"
+      bind:change="onChange" label="RGB" title-width="50rpx" size="mini"	/>
+  </van-cell-group>
+  <van-cell-group>
+    <van-field input-class="input-class" value="{{ value2 }}" readonly placeholder="请输入用户名" border="{{ false }}"
+      bind:change="onChange" label="HSV" title-width="50rpx" size="mini"	/>
+  </van-cell-group>
+</view>

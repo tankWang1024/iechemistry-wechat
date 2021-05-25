@@ -1,0 +1,33 @@
+/* components/index/pictureblock/index.wxss */
+.pic-block {
+  padding: 15rpx;
+  width: 310rpx;
+  display: inline-block;
+  border-radius: 14rpx;
+  background: #ffffff;
+  box-shadow: 16rpx 16rpx 20rpx #e8e8e8,
+    -16rpx -16rpx 20rpx #ffffff;
+}
+
+.pic-view {
+  display: flex;
+  justify-content: space-around;
+}
+
+.input-style {
+  display: flex;
+}
+
+.input-style>view {
+  display: flex;
+}
+
+.input-block {
+  border: 1rpx solid black;
+  width: 100rpx;
+  margin-left: 4rpx;
+}
+
+.input-class {
+  width: 100%;
+}
