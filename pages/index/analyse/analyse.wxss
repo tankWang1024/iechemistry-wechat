@@ -1,0 +1,6 @@
+/* pages/index/analyse/analyse.wxss */
+.btn-position{
+  position:absolute;
+  bottom: 0;
+  width: 100%;
+}

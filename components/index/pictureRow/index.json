@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "picture-block":"/components/index/pictureblock"
+  }
+}

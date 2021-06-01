@@ -1,18 +1,16 @@
 /**index.wxss**/
+page{
+  height: 100%;
+}
 .container{
-  padding-top: 150rpx;
+  /* padding-top: 150rpx; */
   height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-.photo{
-  margin-bottom: 150rpx;
-}
-.upload{
 
-}
 /* .userinfo {
   display: flex;
   flex-direction: column;

@@ -1,0 +1,19 @@
+<!--pages/index/analyse/analyse.wxml-->
+<row />
+<view style="margin-top:36rpx;"></view>
+<van-cell-group>
+  <van-cell title="拟合方法" is-link value="请选择" bind:click="selectMethod" arrow-direction="down" />
+  <van-popup show="{{ method_show }}" position="bottom" custom-style="height: 55%;" bind:close="onCloseMethod">
+    <van-picker show-toolbar bind:cancel="onCloseMethod" bind:confirm="onConfirmMethod" columns="{{ columns }}"
+      title="选择拟合方法" bind:change="onChangeMethod" />
+  </van-popup>
+  <van-cell title="拟合参数" is-link value="请选择" bind:click="selectParams" arrow-direction="down" />
+  <van-popup show="{{ params_show }}" position="bottom" custom-style="height: 55%;" bind:close="onCloseParams">
+    <van-picker show-toolbar bind:cancel="onCloseParams" bind:confirm="onConfirmParams" columns="{{ two_columns }}"
+      title="选择拟合参数" bind:change="onChangeParams" />
+  </van-popup>
+  <view style="margin-bottom:36rpx;"></view>
+</van-cell-group>
+<view class="btn-position">
+  <van-button custom-class="btn-position" type="primary" bind:click="toShow" size="large">确定</van-button>
+</view>

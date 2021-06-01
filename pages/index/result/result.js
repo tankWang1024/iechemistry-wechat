@@ -74,6 +74,9 @@ Page({
     this.setData({
       uploadloading: true
     })
+    wx.navigateTo({
+      url: '/pages/index/analyse/analyse',
+    })
   },
   previewImg(e) {
     console.log(11111)
@@ -85,7 +88,6 @@ Page({
       urls: urls, //需要预览的图片链接列表
       success: function (e) {
         console.log("成功")
-        // console.log(‘预览成功’)
       },
       fail(err) {
         console.log(err)

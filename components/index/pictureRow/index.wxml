@@ -1,0 +1,11 @@
+<!--components/index/pictureRow/index.wxml-->
+<view class="row-style">
+  <picture-block />
+  <picture-block />
+</view>
+<view class="row-style">
+  <picture-block />
+  <picture-block />
+</view>
+
+

@@ -1,0 +1,6 @@
+/* pages/index/details/details.wxss */
+.ana-pic{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 36rpx;
+}

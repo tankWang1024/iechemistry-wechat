@@ -8,8 +8,9 @@
     "pages/user/tip/tip",
     "pages/user/userinfo/userinfo",
     "pages/index/result/result",
-    "pages/index/takePhoto/takePhoto"
-    
+    "pages/index/takePhoto/takePhoto",
+    "pages/index/details/details",
+    "pages/index/analyse/analyse"
   ],
   "window": {
     "backgroundTextStyle": "light",
