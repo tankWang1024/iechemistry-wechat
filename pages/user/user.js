@@ -1,18 +1,24 @@
 // pages/user/user.js
+const app = getApp()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    avatar:"",
+    nickname:""
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    let data = app.data
+    this.setData({
+      avatar:data.avatar,
+      nickname:data.nickname
+    })
   },
 
   /**

@@ -5,6 +5,8 @@
     "van-cell-group": "@vant/weapp/cell-group/index",
     "van-picker": "@vant/weapp/picker/index",
     "van-popup": "@vant/weapp/popup/index",
-    "van-button": "@vant/weapp/button/index"
+    "van-button": "@vant/weapp/button/index",
+    "van-notify": "@vant/weapp/notify/index",
+    "van-toast": "@vant/weapp/toast/index"
   }
 }

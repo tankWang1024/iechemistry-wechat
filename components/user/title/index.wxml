@@ -2,9 +2,12 @@
 <!-- 头像+欢迎组件 -->
 <view style="padding:30rpx 42rpx;">
   <view class="user-title-container">
-  <van-image show-menu-by-longpress="true" round width="150rpx" fit="cover" height="150rpx" src="https://img.yzcdn.cn/vant/cat.jpeg" />
+    <view style="border-radius:50%;overflow:hidden;width:150rpx;height:150rpx">
+      <open-data style="width:150rpx;border-radius:50%;" type="userAvatarUrl"></open-data>
+    </view>
+  <!-- <van-image show-menu-by-longpress="true" round width="150rpx" fit="cover" height="150rpx" src="{{avatar}}" /> -->
   <view class="welcome-content">
-    欢迎你 xxx
+    欢迎你 <open-data type="userNickName"></open-data>
   </view>
 </view>
 </view>

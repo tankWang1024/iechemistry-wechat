@@ -1,7 +1,7 @@
 <!--pages/index/details/details.wxml-->
 <view class="ana-pic">
-  <van-image width="700rpx" height="525rpx" src="/assets/all.jpg" />
+  <van-image width="700rpx" height="525rpx" src="{{scatter}}" />
 </view>
 <view class="ana-pic">
-  <van-image width="700rpx" height="525rpx" src="/assets/All_R_regression.jpg" />
+  <van-image width="700rpx" height="525rpx" src="{{linear}}" />
 </view>

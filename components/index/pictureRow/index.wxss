@@ -1,6 +1,7 @@
 /* components/index/pictureRow/index.wxss */
 .row-style{
-  display: flex;
+  /* display: flex; */
   margin-top: 30rpx;
-  justify-content: space-around;
+  /* justify-content: space-around;
+  align-items: flex-start; */
 }

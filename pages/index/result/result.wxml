@@ -1,27 +1,31 @@
 <!--pages/index/result/result.wxml-->
+<van-image wx:if="{{rotate==1}}" width="400rpx" height="600rpx" image-class="transform-type" bindtap="previewImg"
+  src="{{picUrl}}" />
+  <view wx:if="{{rotate==0}}" style="text-align:center;margin-top:36rpx;">
+    <van-image  width="600rpx" height="400rpx" bindtap="previewImg" src="{{picUrl}}" />
+  </view>
 
-<van-image width="400rpx" height="600rpx" image-class="transform-type" bindtap="previewImg" src="{{picUrl}}" />
-<view style="padding:0 18rpx;margin-top:-66rpx;">
-  <van-cell-group>
-    <van-field value="{{ username }}" required clearable label="实验名" placeholder="请输入实验名"
-      bind:click-icon="onClickIcon" />
-    <van-field value="{{ password }}" type="number" label="试管个数" clearable placeholder="请输入个数" required
+<view class="{{rotate==1?'rotate':'norotate'}}">
+  <van-cell-group border="{{ false }}">
+    <van-field value="{{ remark }}" bind:input="onRemark" required clearable label="实验名" placeholder="请输入实验名"
+      bind:click-icon="onClickIcon" border="{{ false }}" />
+    <van-field value="{{ number }}" type="number" bind:input="onNumber" label="试管个数" clearable placeholder="请输入个数" required
       border="{{ false }}" />
   </van-cell-group>
-  <van-cell-group title="分割参数">
-    <van-field label-class="small-label" input-class="big-width" value="{{ password }}" type="number" label="上"
+  <van-cell-group title="分割参数" border="{{ false }}">
+    <van-field label-class="small-label" bind:input="onTop" input-class="big-width" value="{{ top }}" type="number" label="上"
       clearable placeholder="请输入参数" required border="{{ false }}">
     </van-field>
-    <van-field value="{{ password }}" type="number" label="左" clearable placeholder="请输入参数" required
+    <van-field value="{{ left }}" type="number" bind:input="onLeft" label="左" clearable placeholder="请输入参数" required
       border="{{ false }}" />
-    <van-field value="{{ password }}" type="number" label="下" clearable placeholder="请输入参数" required
+    <van-field value="{{ bottom }}" type="number" label="下" bind:input="onBottom" clearable placeholder="请输入参数" required
       border="{{ false }}" />
-    <van-field value="{{ password }}" type="number" label="右" clearable placeholder="请输入参数" required
+    <van-field value="{{ right }}" type="number" label="右" bind:input="onRight" clearable placeholder="请输入参数" required
       border="{{ false }}" />
   </van-cell-group>
-  <van-cell-group title="其他参数">
-    <van-field label-class="small-label" input-class="big-width" value="{{ password }}" label="试管浓度"
-      clearable placeholder="依次输入，逗号分隔" required border="{{ false }}">
+  <van-cell-group title="其他参数" border="{{ false }}">
+    <van-field label-class="small-label" input-class="big-width" bind:input="onConcentration" value="{{ concentration }}" label="试管浓度" clearable
+      placeholder="依次输入，逗号分隔" required border="{{ false }}">
     </van-field>
   </van-cell-group>
   <view class="control-btn">
@@ -29,4 +33,6 @@
     <van-button custom-class="left-margin" type="primary" bindtap="uploadPic" loading="{{uploadloading}}">确定
     </van-button>
   </view>
+  <van-toast id="van-toast" />
+  <van-notify id="van-notify" />
 </view>

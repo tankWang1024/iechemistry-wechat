@@ -70,8 +70,8 @@ Page({
       quality: 'high',
       success: (res) => {
         console.log(res)
-        wx.navigateTo({
-          url: '/pages/index/result/result?picUrl='+res.tempImagePath,
+        wx.redirectTo({
+          url: '/pages/index/result/result?picUrl='+res.tempImagePath+"&rotate=1",
         })
         this.setData({
           src: res.tempImagePath

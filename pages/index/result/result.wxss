@@ -22,3 +22,10 @@
 .right-margin{
   margin-right: 60rpx;
 }
+.rotate{
+  padding:0 18rpx;
+  margin-top:-66rpx;
+}
+.norotate{
+  padding:0 18rpx;
+}

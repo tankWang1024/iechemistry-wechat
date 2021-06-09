@@ -1,11 +1,9 @@
 <!--components/index/pictureRow/index.wxml-->
-<view class="row-style">
-  <picture-block />
-  <picture-block />
+<view class="row-style" wx:for="{{resultData.length/2}}">
+  <picture-block result="{{resultData[item]}}" wx:if="{{item < resultData.length}}" />
+  <picture-block result="{{resultData[item+1]}}" wx:if="{{item+1 < resultData.length}}" />
+  <!-- <picture-block /> -->
 </view>
-<view class="row-style">
-  <picture-block />
-  <picture-block />
-</view>
+
 
 

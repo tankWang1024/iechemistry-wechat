@@ -1,10 +1,12 @@
 // index.js
 // 获取应用实例
 const app = getApp()
-var {uploadImg} = require("../../utils/util")
+const {$ajax} = require("../../utils/util")
+var {
+  uploadImg
+} = require("../../utils/util")
 Page({
   data: {
-    motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
@@ -23,10 +25,25 @@ Page({
         canIUseGetUserProfile: true
       })
     }
-    console.log('嘿嘿')
     wx.login({
-      success(res) {
+      success:(res)=> {
+        console.log(res)
+        // this.getUserImg()
         if (res.code) {
+          $ajax("/login","POST",{
+            code:res.code
+          },{
+            'content-type': 'application/x-www-form-urlencoded'
+          })
+          .then(res=>{
+            console.log(res)
+            wx.setStorageSync("token",res.token)
+          })
+          .then(()=>{
+            $ajax("/user","GET").then(userinfo=>{
+              console.log(userinfo)
+            })
+          })
           console.log(res.code)
         } else {
           console.log('登录失败！' + res.errMsg)
@@ -40,19 +57,34 @@ Page({
       desc: '展示用户信息', // 声明获取用户个人信息后的用途，后续会展示在弹窗中，请谨慎填写
       success: (res) => {
         console.log(res)
+        console.log(app.data.baseUrl)
         this.setData({
           userInfo: res.userInfo,
           hasUserInfo: true
         })
+      },
+      fail(err){
+        console.log(err)
       }
     })
   },
-  getUserInfo(e) {
-    // 不推荐使用getUserInfo获取用户信息，预计自2021年4月13日起，getUserInfo将不再弹出弹窗，并直接返回匿名的用户个人信息
-    console.log(e)
-    this.setData({
-      userInfo: e.detail.userInfo,
-      hasUserInfo: true
+  getUserImg: function (e) {
+    // 查看是否授权
+    wx.getSetting({
+      success: function (res) {
+        if (res.authSetting['scope.userInfo']) {
+          // 已经授权，可以直接调用 getUserInfo 获取头像昵称
+          wx.getUserInfo({
+            success: function (res) {
+              console.log(res)
+              var userInfo = res.userInfo
+              var avatarUrl = userInfo.avatarUrl; //获取微信用户头像存放的Url 
+              app.data.avatar = userInfo.avatarUrl
+              app.data.nickname = userInfo.nickName
+            }
+          })
+        }
+      }
     })
   },
   click() {

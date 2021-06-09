@@ -1,23 +1,36 @@
 // pages/index/analyse/analyse.js
-const citys = {
-  浓度: ['R', 'G', 'B', 'H', 'S','V'],
+import Notify from '/@vant/weapp/notify/notify';
+import Toast from '/@vant/weapp/toast/toast';
+const {
+  $ajax
+} = require("../../../utils/util")
+const double = {
+  浓度: ['R', 'G', 'B', 'H', 'S', 'V'],
   // 福建: ['福州', '厦门', '莆田', '三明', '泉州'],
 };
+const doubleMap = {
+  "浓度": "C"
+}
 Page({
   /**
    * 页面的初始数据
    */
   data: {
+    imageid: 0,
     columns: ['SVM'],
-    method_show:false,
-    params_show:false,
-    two_columns:[
-      {
-        values: Object.keys(citys),
+    method: "",
+    axiosx: "",
+    axiosy: "",
+    params_msg: "请选择",
+    method_show: false,
+    params_show: false,
+    resultData: [],
+    two_columns: [{
+        values: Object.keys(double),
         className: 'column1',
       },
       {
-        values: citys['浓度'],
+        values: double['浓度'],
         className: 'column2',
         defaultIndex: 0,
       },
@@ -28,28 +41,99 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    this.setData({
+      imageid: options.imageid
+    })
+    this.getData()
+  },
+  getData() {
+
+    $ajax("/processresult", "GET", {
+      imageid: parseInt(this.data.imageid)
+    }).then(res => {
+      console.log(res)
+      this.setData({
+        resultData: res.datas
+      })
+    })
+  },
+  toShow() {
+    let data = this.data
+    if (!this.data.method) {
+      Notify({
+        type: 'warning',
+        message: '拟合方法不能为空'
+      });
+    } else if (!this.data.axiosx) {
+      Notify({
+        type: 'warning',
+        message: '拟合参数不能为空'
+      });
+    } else {
+      Toast.loading({
+        message: '解析中...',
+        forbidClick: true,
+        duration:0
+      });
+      
+      $ajax("/fit","GET",{
+        method:data.method,
+        imageid:data.imageid,
+        axiosx:data.axiosx,
+        axiosy:data.axiosy
+      }).then(res=>{
+        console.log(res)
+        Toast.clear()
+        if(res.code==1){
+          Notify({ type: 'success', message: '解析成功，即将跳转' });
+          setTimeout(()=>{
+            wx.navigateTo({
+              url: `/pages/index/details/details?linear=${res.linear.url}&scatter=${res.scatter.url}`,
+            })
+          },1000)
+        }else{
+          Notify({ type: 'danger', message: res.message });
+        }
+      })
+      
+    }
 
   },
-  toShow(){
-    wx.navigateTo({
-      url: '/pages/index/details/details',
+  onConfirmMethod(event) {
+    const {
+      picker,
+      value,
+      index
+    } = event.detail;
+    this.setData({
+      method: value,
+      method_show: false
     })
   },
-  onChangeMethod(event) {
-    const { picker, value, index } = event.detail;
-  },
-  onChangeParams(event) {
-    const { picker, value, index } = event.detail;
-    picker.setColumnValues(1, citys[value[0]]);
-  },
-  onCloseMethod(){
+  onConfirmParams(event) {
+    console.log(event)
+    const {
+      value,
+      index
+    } = event.detail;
+    let y = doubleMap[value[0]]
+    let x = value[1]
+    console.log("x=" + x + " y=" + y)
     this.setData({
-      method_show:false
+      axiosx: x,
+      axiosy: y,
+      params_msg: value[0] + " " + value[1],
+      params_show: false
     })
   },
-  onCloseParams(){
+  onCloseMethod() {
     this.setData({
-      params_show:false
+      method_show: false
+    })
+  },
+  onCloseParams() {
+    this.setData({
+      params_show: false
     })
   },
   /**
@@ -100,14 +184,14 @@ Page({
   onShareAppMessage: function () {
 
   },
-  selectMethod(){
+  selectMethod() {
     this.setData({
-      method_show:true
+      method_show: true
     })
   },
-  selectParams(){
+  selectParams() {
     this.setData({
-      params_show:true
+      params_show: true
     })
   },
 })

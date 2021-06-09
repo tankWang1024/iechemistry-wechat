@@ -1,6 +1,6 @@
 <!--pages/user/user.wxml-->
 <view>
-<user-title></user-title>
+<user-title avatar="{{avatar}}" nickname="{{nickname}}"></user-title>
 <van-cell-group border="true">
   <van-cell title="实验统计" icon="star-o" is-link url="/pages/user/statisic/statisic"/>
   <van-cell title="个人信息" icon="user-o" is-link url="/pages/user/userinfo/userinfo" />
