@@ -1,6 +1,6 @@
 {
   "pages": [
-    "pages/index/index",
+    "pages/index/index","pages/index/prediction/prediction_select/index",
     "pages/history/history",
     "pages/user/user",
     "pages/user/feedback/feedback",
@@ -10,8 +10,11 @@
     "pages/index/result/result",
     "pages/index/takePhoto/takePhoto",
     "pages/index/analyse/analyse",
+    "pages/index/details/details",
+    "pages/index/prediction/prediction_params/prediction_params",
     
-    "pages/index/details/details"
+    "pages/index/prediction/prediction_details/index",
+    "pages/index/menu/menu"
   ],
   "window": {
     "backgroundTextStyle": "light",

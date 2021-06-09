@@ -1,0 +1,25 @@
+/* pages/index/prediction/prediction_select/index.wxss */
+/* .van-swipe-cell__right {
+  display: inline-block;
+  width: 65px;
+  height: 44px;
+  font-size: 15px;
+  line-height: 44px;
+  color: #fff;
+  text-align: center;
+  background-color: #f44;
+} */
+.mylabel {
+  display: inline-block;
+  width: 200rpx;
+  color: #323233;
+  font-size: 28rpx;
+  line-height: 48rpx;
+}
+.mycontainer{
+  width: 300rpx;
+  display: inline-block;
+}
+.myrow {
+  margin-bottom: 20rpx;
+}

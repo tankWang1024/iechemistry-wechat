@@ -2,7 +2,7 @@
 const app = getApp()
 const {
   $ajax
-} = require("../../../utils/util")
+} = require("../../../../utils/util")
 import Toast from '/@vant/weapp/toast/toast';
 import Notify from '/@vant/weapp/notify/notify';
 Page({
@@ -11,9 +11,9 @@ Page({
    * 页面的初始数据
    */
   data: {
+    formulaid:0,
     picUrl: "",
     imageid: 0,
-    remark: "",
     number: "",
     top: 0.8333,
     right: 0.8,
@@ -32,7 +32,8 @@ Page({
     console.log(options.picUrl)
     this.setData({
       rotate: options.rotate,
-      picUrl: options.picUrl
+      picUrl: options.picUrl,
+      formulaid:options.formulaid
     })
 
   },
@@ -108,10 +109,7 @@ Page({
   },
   uploadPic() {
     console.log("上传")
-    let validateArr = [{
-        label: "实验名",
-        prop: "remark"
-      },
+    let validateArr = [
       {
         label: "试管个数",
         prop: "number"
@@ -132,15 +130,6 @@ Page({
         label: "分割参数：右 ",
         prop: "right"
       },
-      {
-        label: "试管浓度",
-        prop: "concentration",
-        validate(data) {
-          console.log(data)
-          return true
-        },
-        msg: "试管浓度填写不符合规定"
-      },
     ]
     var requestData = {}
     if (this.validateNull(validateArr)) {
@@ -160,7 +149,7 @@ Page({
         url: app.data.baseUrl + "/image",
         formData: {
           rotate: that.data.rotate,
-          remark: that.data.remark
+          remark: new Date().getTime()
         },
         success(res) {
           console.log(res)
@@ -183,13 +172,14 @@ Page({
             duration: 0,
             forbidClick: true,
           });
-          $ajax("/process", "POST", requestData).then(res => {
+          $ajax("/predict", "POST", requestData).then(res => {
+            console.log(res)
             Toast.clear()
             if(res.code==1){
               Notify({ type: 'success', message: res.message+"，即将跳转" });
               setTimeout(()=>{
                 wx.navigateTo({
-                  url: '/pages/index/analyse/analyse?imageid='+that.data.imageid,
+                  url: '/pages/index/prediction/prediction_details/index?obj='+JSON.stringify(res),
                 })
               },1000)
             }else{
@@ -234,19 +224,20 @@ Page({
   varTransfer() {
     let that = this
     let data = that.data
-    var reg1 = new RegExp(",", "g")
-    let rep1 = this.data.concentration.replace(reg1, "，")
-    var reg2 = new RegExp("，", "g")
-    let concentration = rep1.replace(reg2, " ")
+    // var reg1 = new RegExp(",", "g")
+    // let rep1 = this.data.concentration.replace(reg1, "，")
+    // var reg2 = new RegExp("，", "g")
+    // let concentration = rep1.replace(reg2, " ")
     return {
       imageid: data.imageid,
-      remark: data.remark,
-      number: data.number,
+      // remark: data.remark,
+      number: parseInt(data.number),
       top: data.top,
       left: data.left,
       bottom: data.bottom,
       right: data.right,
-      concentration: concentration
+      formulaid:parseInt(data.formulaid)
+      // concentration: concentration
     }
 
   },

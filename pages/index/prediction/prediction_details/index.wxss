@@ -1,0 +1,6 @@
+/* pages/index/prediction/prediction_details/index.wxss */
+.ana-pic{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 36rpx;
+}

@@ -1,0 +1,4 @@
+<!--pages/index/prediction/prediction_details/index.wxml-->
+<view class="ana-pic">
+  <van-image width="700rpx" height="525rpx" src="{{url}}" />
+</view>
