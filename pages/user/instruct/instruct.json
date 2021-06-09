@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "使用说明",
+  "usingComponents": {
+    "van-cell": "@vant/weapp/cell/index",
+    "van-cell-group": "@vant/weapp/cell-group/index"
+  }
+}

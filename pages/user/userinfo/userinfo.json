@@ -1,4 +1,11 @@
-{  
+{
   "navigationBarTitleText": "个人信息",
-  "usingComponents": {}
+  "usingComponents": {
+    "van-cell": "@vant/weapp/cell/index",
+    "van-cell-group": "@vant/weapp/cell-group/index",
+    "row": "/components/index/pictureRow",
+    "van-button": "@vant/weapp/button/index",
+    "van-notify": "@vant/weapp/notify/index",
+    "van-toast": "@vant/weapp/toast/index"
+  }
 }

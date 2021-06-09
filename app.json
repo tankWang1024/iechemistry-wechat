@@ -10,8 +10,8 @@
     "pages/index/result/result",
     "pages/index/takePhoto/takePhoto",
     "pages/index/analyse/analyse",
-    
-    "pages/index/details/details"
+    "pages/index/details/details",
+    "pages/user/instruct/instruct"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -21,7 +21,8 @@
   },
   "sitemapLocation": "sitemap.json",
   "tabBar": {
-    "list": [{
+    "list": [
+      {
         "pagePath": "pages/index/index",
         "text": "主页",
         "iconPath": "/assets/index.png",

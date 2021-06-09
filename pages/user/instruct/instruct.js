@@ -1,39 +1,18 @@
-// pages/user/userinfo/userinfo.js
-const app = getApp()
+// pages/user/instruct/instruct.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    id: "未知",
-    name: "未知",
-    phone: "未知",
-    wxid: "未知"
+
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    var that = this
-    wx.request({
-      url: app.data.baseUrl + "/user",
-      method:"GET",
-      header: {
-        token: wx.getStorageSync('token')
-      },
-      success(res) {
-        console.log(res.data.user)
-        let data = res.data.user
-        that.setData({
-          id: data.id,
-          name: data.name,
-          phone: data.phone,
-          wxid: data.wxid
-        })
-      }
-    })
+
   },
 
   /**

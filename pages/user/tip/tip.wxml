@@ -1,23 +1,24 @@
 <!--pages/user/tip/tip.wxml-->
 <view class="tips-container">
-  <view>行行好吧，赏口饭吃</view>
+  <view class="title">行行好吧，赏口饭吃</view>
   <van-image
-  width="10rem"
-  height="10rem"
+  width="22rem"
+  height="22rem"
   fit="contain"
   src="/assets/tipspic.jpg"
 />
 <view style="margin-bottom:36rpx;">长按图片保存打赏</view>
 <view>
   <van-image
-  width="10rem"
-  height="10rem"
+  width="22rem"
+  height="22rem"
   fit="contain"
   src="/assets/dashangkun1.jpg"
   show-menu-by-longpress="true"
-/>  <van-image
-  width="10rem"
-  height="10rem"
+/>  
+<van-image
+  width="22rem"
+  height="22rem"
   fit="contain"
   src="/assets/dashangkun2.jpg"
   show-menu-by-longpress="true"

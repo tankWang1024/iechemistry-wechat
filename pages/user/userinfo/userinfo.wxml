@@ -1,2 +1,11 @@
-<!--pages/user/userinfo/userinfo.wxml-->
-<text>pages/user/userinfo/userinfo.wxml</text>
+<view>
+  <van-cell-group title="功能说明">
+    <van-cell title="用户ID" value="{{id}}" />
+    <van-cell title="姓名" value="{{name}}" />
+    <van-cell title="电话" value="{{phone}}" />
+    <van-cell title="微信号" value="{{wxid}}" />
+  </van-cell-group>
+  <view class="btn-position">
+    <van-button custom-class="btn-position" type="primary" bind:click="toShow" size="large">修改</van-button>
+  </view>
+</view>

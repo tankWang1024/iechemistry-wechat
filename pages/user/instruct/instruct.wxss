@@ -1,0 +1,10 @@
+/* pages/user/instruct/instruct.wxss */
+
+.border-gray {
+  height: 4rpx;
+  border-radius: 0rpx;
+  border-radius: 0rpx;
+  background: linear-gradient(145deg, #323331, #323331);
+  box-shadow:  2rpx 2rpx 4rpx #000000,
+               -2rpx -2rpx 4rpx #000000;
+}

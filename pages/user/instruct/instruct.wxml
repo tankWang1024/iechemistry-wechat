@@ -1,0 +1,18 @@
+<view>
+  <van-cell-group title="功能说明">
+    <van-cell title="主页" value="拍照、上传图像后进行拟合、预测" />
+    <van-cell title="历史" value="查看预测的历史记录等" />
+    <van-cell title="用户" value="用户的信息、历史数据信息、使用说明等" />
+  </van-cell-group>
+
+  <view class="border-gray"></view>
+
+  <van-cell-group title="参数填写说明">
+    <van-cell title="实验名" value="英文、数字、下划线, 不要用中文,其余符号,防治出错" />
+    <van-cell title="试管个数" value="填写图片上试管的个数" />
+    <van-cell title="分割参数" value="上下左右保持默认参数, 后面在说明" />
+    <van-cell title="试管浓度" value="使用空格隔开,有多少个试管就填多少个浓度" />
+    <van-cell title="拟合方法" value="目前只支持了SVM的线性拟合y=ax+b" />
+    <van-cell title="拟合参数" value="y目前只支持浓度C，x目前只支持RGB" />
+  </van-cell-group>
+</view>
