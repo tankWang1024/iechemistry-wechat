@@ -1,18 +1,23 @@
-// pages/index/takePhoto/takePhoto.js
-var {uploadImg} = require("../../../utils/util")
+// pages/index/menu/menu.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    show:false
+    picUrl:"",
+    rotate:0
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    console.log(options)
+    this.setData({
+      picUrl:options.picUrl,
+      rotate:options.rotate
+    })
 
   },
 
@@ -63,32 +68,5 @@ Page({
    */
   onShareAppMessage: function () {
 
-  },
-  takePhoto() {
-    const ctx = wx.createCameraContext()
-    ctx.takePhoto({
-      quality: 'high',
-      success: (res) => {
-        console.log(res)
-        wx.redirectTo({
-          url: '/pages/index/menu/menu?picUrl='+res.tempImagePath+"&rotate=1",
-        })
-        this.setData({
-          src: res.tempImagePath
-        })
-      }
-    })
-  },
-  error(e) {
-    console.log(e.detail)
-  },
-  getMore(){
-    console.log(123)
-    this.setData({
-      show:!this.data.show
-    })
-  },
-  uploadImg(){
-   uploadImg("redirectTo")
   }
 })

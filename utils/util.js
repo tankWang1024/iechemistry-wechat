@@ -10,11 +10,10 @@ const formatTime = date => {
   return `${[year, month, day].map(formatNumber).join('/')} ${[hour, minute, second].map(formatNumber).join(':')}`
 }
 
-const formatNumber = n => {
-  n = n.toString()
-  return n[1] ? n : `0${n}`
-}
-const uploadImg = () => {
+const uploadImg = (type) => {
+  if(!type){
+    type = "navigateTo"
+  }
   wx.chooseImage({ //从本地相册选择图片或使用相机拍照
     count: 1, //最多选择多少张图片 默认为9
     sizeType: ['original', 'compressed'], //所选照片的尺寸 original为原图compressed为缩略图
@@ -25,8 +24,8 @@ const uploadImg = () => {
       //   imgs: res.tempFilePaths
       // });
       console.log(tempFilePaths[0])
-      wx.navigateTo({
-        url: '/pages/index/result/result?picUrl=' + tempFilePaths[0]+"&rotate=0",
+      wx[type]({
+        url: "/pages/index/menu/menu" + '?picUrl=' + tempFilePaths[0] + "&rotate=0",
       })
     },
   })
@@ -40,7 +39,7 @@ const $ajax = (url, method, data, header) => {
   }
   header.token = wx.getStorageSync("token")
   header['content-type'] = 'application/x-www-form-urlencoded'
-  
+
   let requestUrl = app.data.baseUrl + url
   return new Promise((resolve, rej) => {
     wx.request({
@@ -51,8 +50,8 @@ const $ajax = (url, method, data, header) => {
       success: (res) => {
         if (res.statusCode == 200) {
           let data = res.data
-          if(typeof data == "string"){
-            console.log("此data数据未json化："+data)
+          if (typeof data == "string") {
+            console.log("此data数据未json化：" + data)
             data = JSON.parse(data)
           }
           resolve(data)

@@ -1,19 +1,31 @@
-// pages/index/takePhoto/takePhoto.js
-var {uploadImg} = require("../../../utils/util")
+// pages/index/prediction/prediction_details/index.js
+const {$ajax} = require("../../../../utils/util")
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    show:false
+    url:""
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    let data = options.obj
+    let that=  this
+    let res = JSON.parse(data)
+    console.log(res)
+    let imageid = res.iecExpPredict.imageid
+    $ajax("/image","GET",{
+      imageid:imageid
+    }).then(img=>{
+      console.log(img)
+      that.setData({
+        url:img.image.url
+      })
+    })
   },
 
   /**
@@ -63,32 +75,5 @@ Page({
    */
   onShareAppMessage: function () {
 
-  },
-  takePhoto() {
-    const ctx = wx.createCameraContext()
-    ctx.takePhoto({
-      quality: 'high',
-      success: (res) => {
-        console.log(res)
-        wx.redirectTo({
-          url: '/pages/index/menu/menu?picUrl='+res.tempImagePath+"&rotate=1",
-        })
-        this.setData({
-          src: res.tempImagePath
-        })
-      }
-    })
-  },
-  error(e) {
-    console.log(e.detail)
-  },
-  getMore(){
-    console.log(123)
-    this.setData({
-      show:!this.data.show
-    })
-  },
-  uploadImg(){
-   uploadImg("redirectTo")
   }
 })
