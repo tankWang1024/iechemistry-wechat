@@ -1,34 +1,39 @@
 <!--pages/user/statisic/statisic.wxml-->
 <view>
   <van-cell-group title="最近实验">
-    <van-cell title="试管一号" value="2001.04.01" />
-    <van-cell title="试管二号" value="2001.04.05" />
+    <van-cell title="{{latestExp1}}" value="{{latestExp1_time}}" />
+    <van-cell title="{{latestExp2}}" value="{{latestExp2_time}}" />
   </van-cell-group>
   <view class="border-green"></view>
   <van-cell-group title="一共进行了：" value-class="value-custom-class">
     <van-cell title="">
       <view slot="title">
-        <view class="van-cell-text">5组实验</view>
+        <view class="van-cell-text">{{expNum}}组实验</view>
       </view>
     </van-cell>
     <van-cell title="">
       <view slot="title">
-        <view class="van-cell-text">40根试管</view>
+        <view class="van-cell-text">{{objectNum}}根试管</view>
       </view>
     </van-cell>
     <van-cell title="">
       <view slot="title">
-        <view class="van-cell-text">60个选区</view>
+        <view class="van-cell-text">总共上传了{{imageNum}}组实验图片</view>
       </view>
     </van-cell>
     <van-cell title="">
       <view slot="title">
-        <view class="van-cell-text">实验了7天</view>
+        <view class="van-cell-text">{{regionsNum}}个选区</view>
       </view>
     </van-cell>
     <van-cell title="">
       <view slot="title">
-        <view class="van-cell-text">相当于做了七天实验</view>
+        <view class="van-cell-text">第一次实验是{{first_time}}</view>
+      </view>
+    </van-cell>
+    <van-cell title="">
+      <view slot="title">
+        <view class="van-cell-text">截至目前,你已经做了很久实验了,加油哦!</view>
       </view>
     </van-cell>
   </van-cell-group>

@@ -74,11 +74,12 @@ Page({
       success: function (res) {
         if (res.authSetting['scope.userInfo']) {
           // 已经授权，可以直接调用 getUserInfo 获取头像昵称
-          wx.getUserInfo({
+          wx.getUserProfile({
             success: function (res) {
               console.log(res)
               var userInfo = res.userInfo
               var avatarUrl = userInfo.avatarUrl; //获取微信用户头像存放的Url 
+              wx.setStorageSync('avatar', userInfo.avatarUrl)
               app.data.avatar = userInfo.avatarUrl
               app.data.nickname = userInfo.nickName
             }

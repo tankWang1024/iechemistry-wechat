@@ -3,6 +3,12 @@
     <van-cell title="主页" value="拍照、上传图像后进行拟合、预测" />
     <van-cell title="历史" value="查看预测的历史记录等" />
     <van-cell title="用户" value="用户的信息、历史数据信息、使用说明等" />
+    <van-cell value="拍照时, 若未开启陀螺仪(已开启旋转锁定),则只能试管口和手机都朝上进行拍照;若开启陀螺仪,镜头朝前方进行拍照（不要俯拍）。请保证手机镜头不要朝着地面俯拍(不然拍出来的照片无法区分方向)" icon="fire" color="#ee0a24">
+      <view slot="??">
+        <view class="van-cell-text">拍照</view>
+          <van-tag type="danger">注意</van-tag>
+      </view>
+    </van-cell>
   </van-cell-group>
 
   <view class="border-gray"></view>

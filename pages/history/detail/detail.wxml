@@ -1,0 +1,24 @@
+<view class="container">
+  <van-cell-group title="图像数据">
+    <van-image src="{{history.url}}" width="24rem" height="24rem" fit="contain">
+    </van-image>
+  </van-cell-group>
+
+  <view class="border-gray"></view>
+
+  <van-cell-group title="相关信息">
+    <van-cell model:value="{{ history.create_time }}" center clearable="false" label="创建时间" placeholder="" border="{{ false }} ">
+    </van-cell>
+    <van-cell model:value="y = ({{history.a}}) x + ({{history.b}})" center clearable="false" label="公式" placeholder="" border="{{ false }} ">
+    </van-cell>
+    <van-cell model:value="{{history.r2}}" center clearable="false" label="R²" placeholder="" border="{{ false }} ">
+    </van-cell>
+  </van-cell-group>
+
+  <view class="border-gray"></view>
+
+  <van-cell-group title="预测结果">
+    <van-cell model:value="{{ history.concentration }}" center clearable="false" label="浓度" placeholder="" border="{{ false }} ">
+    </van-cell>
+  </van-cell-group>
+</view>

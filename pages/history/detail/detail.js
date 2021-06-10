@@ -1,40 +1,23 @@
-// pages/index/prediction/prediction_details/index.js
-const {$ajax} = require("../../../../utils/util")
+// pages/history/detail/detail.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    url:"",
-    formula: {},
-    iecExpPredict: {}
+    history:{}
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    let data = options.obj
-    let that=  this
-    let res = JSON.parse(data)
-    console.log(res)
+    let hstr = options.history
+    console.log('wori')
+    console.log(JSON.parse(hstr))
     this.setData({
-      formula:res.formula,
-      iecExpPredict:res.iecExpPredict
+      history: JSON.parse(hstr)
     })
-    let imageid = this.data.iecExpPredict.imageid
-
-    $ajax("/image","GET",{
-      imageid:imageid
-    }).then(img=>{
-      console.log(img)
-      that.setData({
-        url:img.image.url
-      })
-    })
-
-    // else
   },
 
   /**

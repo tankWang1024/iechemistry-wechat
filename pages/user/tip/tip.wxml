@@ -1,27 +1,59 @@
 <!--pages/user/tip/tip.wxml-->
 <view class="tips-container">
-  <view class="title">行行好吧，赏口饭吃</view>
-  <van-image
-  width="22rem"
-  height="22rem"
-  fit="contain"
-  src="/assets/tipspic.jpg"
-/>
-<view style="margin-bottom:36rpx;">长按图片保存打赏</view>
-<view>
-  <van-image
-  width="22rem"
-  height="22rem"
-  fit="contain"
-  src="/assets/dashangkun1.jpg"
-  show-menu-by-longpress="true"
-/>  
-<van-image
-  width="22rem"
-  height="22rem"
-  fit="contain"
-  src="/assets/dashangkun2.jpg"
-  show-menu-by-longpress="true"
-/>
-</view>
+  <view>
+    <text class="h1">iechemistry</text>
+    <view class="border-lightgray"></view>
+    <text class="h3">智能电化学平台,基于python flask的电化学实验分析处理平台</text>
+    <text class="h1 bold">电化学智能平台 子模块</text>
+    <view class="border-lightgray"></view>
+    <text class="list">· 荧光分析</text>
+    <text class="list">· 图像、数据的预处理</text>
+    <text class="list">· 历史实验数据统计、分析</text>
+    <view class="border-lightgray"></view>
+    <view class="tatto">
+      <text>智能电化学平台目前尚且处于构思阶段，目前能想到的即这三个功能 第一阶段以荧光分析为主。 除此之外,还有额外添加的功能，登录绑定等功能，做这个功能是为了将个人的实验数据记录下来，方便以后个人进行实验分析。
+      </text>
+    </view>
+    <text class="code">
+      技术栈：
+      · python flask flask-restful redis
+      · pytorch 1.8
+      · mysql 5.x
+      · qiniu cos 七牛云对象存储
+      · natapp内网穿透工具
+    </text>
+    <text class="hilight">
+      后端代码: https://github.com/qkmc-rk/iechemistry
+      前端代码: https://github.com/qkmc-rk/iechemistry-wechat
+    </text>
+
+    <text class="author">
+      开发者:
+      · 后端：Mrruan
+      · 前端：zhang-yuchi
+    </text>
+
+    <text class="tips">
+      如果你觉得这款App还不错, 可以打赏我们, 我们将会提供更加优质的App.
+    </text>
+    
+  </view>
+  <view class="border-lightgray"></view>
+  <view style="margin-bottom:36rpx;">长按图片保存打赏</view>
+  <view>
+    <van-image
+      width="22rem"
+      height="22rem"
+      fit="contain"
+      src="/assets/dashangkun1.jpg"
+      show-menu-by-longpress="true"
+    />  
+    <van-image
+      width="22rem"
+      height="22rem"
+      fit="contain"
+      src="/assets/dashangkun2.jpg"
+      show-menu-by-longpress="true"
+    />
+  </view>
 </view>

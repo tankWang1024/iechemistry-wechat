@@ -1,11 +1,17 @@
 <view>
-  <van-cell-group title="功能说明">
-    <van-cell title="用户ID" value="{{id}}" />
-    <van-cell title="姓名" value="{{name}}" />
-    <van-cell title="电话" value="{{phone}}" />
-    <van-cell title="微信号" value="{{wxid}}" />
+  <van-cell-group title="个人信息">
+    <view>
+      <van-field disabled  model:value="{{ id }}" center clearable="false" label="用户ID" placeholder="" border="{{ false }} ">
+      </van-field>
+      <van-field  model:value="{{ phone }}" center clearable label="电话" placeholder="" border="{{ false }}">
+      </van-field>
+      <van-field  model:value="{{ name }}" center clearable label="用户名" placeholder="" border="{{ false }}">
+      </van-field>
+      <van-field  model:value="{{ wxid }}" center clearable label="微信号" placeholder="" border="{{ false }}">
+      </van-field>
+      <van-button size="large" bind:click="updateUser" type="primary">修改</van-button>
+    </view>
   </van-cell-group>
-  <view class="btn-position">
-    <van-button custom-class="btn-position" type="primary" bind:click="toShow" size="large">修改</van-button>
-  </view>
 </view>
+<van-notify id="van-notify" />
+<van-toast id="van-toast" />

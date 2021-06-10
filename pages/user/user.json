@@ -2,6 +2,7 @@
   "usingComponents": {
     "user-title":"/components/user/title",
     "van-cell": "@vant/weapp/cell/index",
-    "van-cell-group": "@vant/weapp/cell-group/index"
+    "van-cell-group": "@vant/weapp/cell-group/index",
+    "van-button": "@vant/weapp/button/index"
   }
 }

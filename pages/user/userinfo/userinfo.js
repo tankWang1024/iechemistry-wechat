@@ -1,4 +1,8 @@
 // pages/user/userinfo/userinfo.js
+const {$ajax} = require("../../../utils/util")
+import Notify from '/@vant/weapp/toast/toast'
+import Toast from '/@vant/weapp/toast/toast';
+
 const app = getApp()
 Page({
 
@@ -6,10 +10,11 @@ Page({
    * 页面的初始数据
    */
   data: {
-    id: "未知",
-    name: "未知",
-    phone: "未知",
-    wxid: "未知"
+    id: "",
+    name: "",
+    phone: "",
+    wxid: "",
+    avatar: ""
   },
 
   /**
@@ -83,5 +88,25 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  updateUser: function () {
+    var that = this
+    console.log(this.data)
+    $ajax("/user","POST",{
+      phone: that.data.phone,
+      name: that.data.name,
+      wxid: that.data.wxid,
+      avatar: wx.getStorageSync('avatar')
+
+    },{
+      'content-type': 'application/x-www-form-urlencoded',
+      'token': wx.getStorageSync('token')
+    })
+    .then(res=>{
+      let code = res.code
+      if (code == 1){
+        Notify({ type: 'success', message: '修改成功' })
+      }
+    })
   }
 })

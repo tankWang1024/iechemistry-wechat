@@ -1,0 +1,13 @@
+/* pages/history/detail/detail.wxss */ 
+.container {
+  background-color:rgba(247, 244, 244, 0.384);
+}
+
+.border-gray {
+  height: 1rpx;
+  border-radius: 0rpx;
+  border-radius: 0rpx;
+  background: linear-gradient(145deg, #898a88, #aaaaa9);
+  box-shadow:  2rpx 2rpx 4rpx #6d6c6c,
+               -2rpx -2rpx 4rpx #696868;
+}

@@ -6,8 +6,9 @@
   <van-cell title="个人信息" icon="user-o" is-link url="/pages/user/userinfo/userinfo" />
   <van-cell title="打赏作者" icon="balance-o" is-link url="/pages/user/tip/tip" />
   <van-cell title="使用说明" icon="question-o" is-link url="/pages/user/instruct/instruct" />
-  <van-cell title="用户反馈" icon="service-o">
-    <contact-button>联系客服</contact-button>
+  <van-cell center="true" title="用户反馈" icon="service-o" is-link link-type="contact">
+    <button open-type="contact" class="contact">??</button>
   </van-cell>
+  
 </van-cell-group>
 </view>

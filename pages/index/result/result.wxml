@@ -5,7 +5,8 @@
     <van-image  width="600rpx" height="400rpx" bindtap="previewImg" src="{{picUrl}}" />
   </view>
 
-<view class="{{rotate==1?'rotate':'norotate'}}">
+<!-- <view class="{{rotate==1?'rotate':'norotate'}}"> -->
+<view class="norotate">
   <van-cell-group border="{{ false }}">
     <van-field value="{{ remark }}" bind:input="onRemark" required clearable label="实验名" placeholder="请输入实验名"
       bind:click-icon="onClickIcon" border="{{ false }}" />

@@ -5,7 +5,7 @@ const {
   $ajax
 } = require("../../../utils/util")
 const double = {
-  浓度: ['R', 'G', 'B', 'H', 'S', 'V'],
+  浓度: ['R', 'G', 'B','(G+R)/B', 'H', 'S', 'V'],
   // 福建: ['福州', '厦门', '莆田', '三明', '泉州'],
 };
 const doubleMap = {
