@@ -15,10 +15,10 @@ Page({
     imageid: 0,
     remark: "",
     number: "",
-    top: 0.8333,
-    right: 0.8,
-    left: 0.2,
-    bottom: 0.5,
+    top: 0.6,
+    right: 0.6,
+    left: 0.4,
+    bottom: 0.8,
     concentration: "",
     uploadloading: false,
     rotate: 0
@@ -117,19 +117,19 @@ Page({
         prop: "number"
       },
       {
-        label: "分割参数：上 ",
+        label: "分割参数：ymin ",
         prop: "top"
       },
       {
-        label: "分割参数：左 ",
+        label: "分割参数：xmin ",
         prop: "left"
       },
       {
-        label: "分割参数：下 ",
+        label: "分割参数：ymax ",
         prop: "bottom"
       },
       {
-        label: "分割参数：右 ",
+        label: "分割参数：xmax ",
         prop: "right"
       },
       {

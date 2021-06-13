@@ -5,7 +5,7 @@ const {
   $ajax
 } = require("../../../utils/util")
 const double = {
-  浓度: ['R', 'G', 'B','(G+R)/B', 'H', 'S', 'V'],
+  浓度: ['R', 'G', 'B','(G+R)/B', 'G/B','R/B', 'R/G', 'S/V', 'H/S' , 'H', 'S', 'V'],
   // 福建: ['福州', '厦门', '莆田', '三明', '泉州'],
 };
 const doubleMap = {
@@ -17,7 +17,7 @@ Page({
    */
   data: {
     imageid: 0,
-    columns: ['SVM'],
+    columns: ['linear regression'],
     method: "",
     axiosx: "",
     axiosy: "",
@@ -51,7 +51,8 @@ Page({
     $ajax("/processresult", "GET", {
       imageid: parseInt(this.data.imageid)
     }).then(res => {
-      console.log(res)
+      console.log('/processresult结果: ')
+      console.log(res.datas)
       this.setData({
         resultData: res.datas
       })

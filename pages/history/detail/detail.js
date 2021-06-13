@@ -13,7 +13,7 @@ Page({
    */
   onLoad: function (options) {
     let hstr = options.history
-    console.log('wori')
+    console.log('woren')
     console.log(JSON.parse(hstr))
     this.setData({
       history: JSON.parse(hstr)

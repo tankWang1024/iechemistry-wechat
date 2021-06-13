@@ -21,7 +21,7 @@
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "智能电化学荧光分析",
+    "navigationBarTitleText": "智能荧光分析",
     "navigationBarTextStyle": "black"
   },
   "sitemapLocation": "sitemap.json",

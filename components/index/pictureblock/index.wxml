@@ -1,7 +1,7 @@
 <!--components/index/pictureblock/index.wxml-->
 <view class="pic-block">
   <view class="pic-view">
-    <van-image width="150rpx" height="100" fit="contain" src="{{result.object_url}}" />
+    <!-- <van-image width="150rpx" height="100" fit="contain" src="{{result.object_url}}" /> -->
     <van-image width="150rpx" height="100" fit="contain" src="{{result.region_url}}" />
   </view>
   <van-cell-group>

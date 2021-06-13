@@ -13,6 +13,10 @@
     </van-cell>
     <van-cell model:value="{{history.r2}}" center clearable="false" label="R²" placeholder="" border="{{ false }} ">
     </van-cell>
+    <van-cell model:value="{{history.x}}" center clearable="false" label="x" placeholder="" border="{{ false }} ">
+    </van-cell>
+    <van-cell model:value="{{history.y}}" center clearable="false" label="y" placeholder="" border="{{ false }} ">
+    </van-cell>
   </van-cell-group>
 
   <view class="border-gray"></view>
