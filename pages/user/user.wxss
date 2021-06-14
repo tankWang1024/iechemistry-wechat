@@ -2,4 +2,7 @@
 
 .contact{
   opacity: 0;
+  height: 48rpx;
+  /* width: 600rpx; */
+  /* margin-left: -50rpx; */
 }

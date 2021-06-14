@@ -39,7 +39,6 @@ const $ajax = (url, method, data, header) => {
   }
   header.token = wx.getStorageSync("token")
   header['content-type'] = 'application/x-www-form-urlencoded'
-
   let requestUrl = app.data.baseUrl + url
   return new Promise((resolve, rej) => {
     wx.request({
@@ -58,6 +57,7 @@ const $ajax = (url, method, data, header) => {
         }
       },
       fail: (err) => {
+        console.log("错误啦")
         rej(err)
       }
     })

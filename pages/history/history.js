@@ -14,13 +14,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    $ajax("/predictrecord", "GET").then(res => {
-      console.log('heihehie')
-      console.log(res)
-      this.setData({
-        history: res.data
-      })
-    })
+   
   },
 
   /**
@@ -35,6 +29,13 @@ Page({
    */
   onShow(){
     // this.getTabBar().init();
+    $ajax("/predictrecord", "GET").then(res => {
+      console.log('heihehie')
+      console.log(res)
+      this.setData({
+        history: res.data
+      })
+    })
   },
 
   /**

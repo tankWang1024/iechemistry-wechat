@@ -1,6 +1,8 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/user/formula/index",
+    "pages/user/formula/add/add",
     "pages/index/prediction/prediction_select/index",
     "pages/history/history",
     "pages/user/user",

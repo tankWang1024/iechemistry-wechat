@@ -1,14 +1,16 @@
 <!--pages/user/user.wxml-->
 <view>
-<user-title avatar="{{avatar}}" nickname="{{nickname}}"></user-title>
-<van-cell-group border="true">
-  <van-cell title="实验统计" icon="star-o" is-link url="/pages/user/statisic/statisic"/>
-  <van-cell title="个人信息" icon="user-o" is-link url="/pages/user/userinfo/userinfo" />
-  <van-cell title="打赏作者" icon="balance-o" is-link url="/pages/user/tip/tip" />
-  <van-cell title="使用说明" icon="question-o" is-link url="/pages/user/instruct/instruct" />
-  <van-cell center="true" title="用户反馈" icon="service-o" is-link link-type="contact">
-    <button open-type="contact" class="contact">??</button>
-  </van-cell>
-  
-</van-cell-group>
+  <user-title avatar="{{avatar}}" nickname="{{nickname}}"></user-title>
+  <van-cell-group border="true">
+    <van-cell title="实验统计" icon="star-o" is-link url="/pages/user/statisic/statisic" />
+    <van-cell title="我的公式" icon="edit" is-link url="/pages/user/formula/index" />
+    <van-cell title="个人信息" icon="user-o" is-link url="/pages/user/userinfo/userinfo" />
+    <van-cell title="打赏作者" icon="balance-o" is-link url="/pages/user/tip/tip" />
+    <van-cell title="使用说明" icon="question-o" is-link url="/pages/user/instruct/instruct" />
+    <van-cell center="true" title="用户反馈" icon="service-o" is-link link-type="contact"><button open-type="contact"
+        class="contact">??</button> </van-cell>
+
+
+
+  </van-cell-group>
 </view>
