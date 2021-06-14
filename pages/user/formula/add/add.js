@@ -13,7 +13,7 @@ Page({
     method_show: false,
     t_method_show: false,
     ycolumns: ['C'],
-    xcolumns: ['R', 'G', 'B', 'H', 'S', 'V'],
+    xcolumns: ['R', 'G', 'B','(G+R)/B', 'G/B','R/B', 'R/G', 'S/V', 'H/S' , 'H', 'S', 'V'],
     tcolumns: [1],
     a: "",
     b: "",
