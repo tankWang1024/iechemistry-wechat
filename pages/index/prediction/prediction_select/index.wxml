@@ -1,24 +1,24 @@
 <!--pages/index/prediction/prediction_select/index.wxml-->
-<van-empty wx:if="{{formula.length==0}}" description="暂无实验数据" />
+<van-empty wx:if="{{formula.length==0}}" description="no data found" />
 <van-cell-group wx:if="{{formula.length>0}}" border="{{ false }}">
   <view wx:for="{{formula}}" style="position:relative;border-bottom:2rpx solid #ebedf0;">
-    <van-field value="{{ item.remark }}" center clearable label="实验名" placeholder="" border="{{ false }}"
+    <van-field value="{{ item.remark }}" center clearable label="exp name" placeholder="" border="{{ false }}"
       use-button-slot>
       <view slot="button" size="small" style="width:140rpx" type="primary">
       </view>
     </van-field>
-    <van-field value="{{ item.y+' '+item.x }}" center clearable label="拟合参数" placeholder="" border="{{ false }}"
+    <van-field value="{{ item.y+' '+item.x }}" center clearable label="fitting params" placeholder="" border="{{ false }}"
       use-button-slot>
       <view slot="button" size="small" style="width:140rpx" type="primary">
       </view>
     </van-field>
-    <van-field value="{{ item.format }}" center clearable label="公式" placeholder="" border="{{ false }}"
+    <van-field value="{{ item.format }}" center clearable label="formula" placeholder="" border="{{ false }}"
       use-button-slot>
       <view slot="button" size="small" style="width:140rpx" type="primary">
       </view>
     </van-field>
     <van-button bind:click="selectOne" data-formulaid="{{item.id}}"
-      custom-style="position: absolute; right: 0;top:0;width:140rpx;height:100%;" type="primary">选择
+      custom-style="position: absolute; right: 0;top:0;width:140rpx;height:100%;" type="primary">select
     </van-button>
   </view>
 

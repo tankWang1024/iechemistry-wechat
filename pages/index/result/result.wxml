@@ -8,30 +8,30 @@
 <!-- <view class="{{rotate==1?'rotate':'norotate'}}"> -->
 <view class="norotate">
   <van-cell-group border="{{ false }}">
-    <van-field value="{{ remark }}" bind:input="onRemark" required clearable label="实验名" placeholder="请输入实验名"
+    <van-field value="{{ remark }}" bind:input="onRemark" required clearable label="exp name" placeholder="input your exp name"
       bind:click-icon="onClickIcon" border="{{ false }}" />
-    <van-field value="{{ number }}" type="number" bind:input="onNumber" label="试管个数" clearable placeholder="请输入个数" required
+    <van-field value="{{ number }}" type="number" bind:input="onNumber" label="tube number" clearable placeholder="input tube number" required
       border="{{ false }}" />
   </van-cell-group>
-  <van-cell-group title="分割参数" border="{{ false }}">
-    <van-field label-class="small-label" bind:input="onTop" input-class="big-width" value="{{ top }}" type="number" label="上"
-      clearable placeholder="请输入参数" required border="{{ false }}">
+  <van-cell-group title="division param" border="{{ false }}">
+    <van-field label-class="small-label" bind:input="onTop" input-class="big-width" value="{{ top }}" type="number" label="top"
+      clearable placeholder="please input params" required border="{{ false }}">
     </van-field>
-    <van-field value="{{ left }}" type="number" bind:input="onLeft" label="左" clearable placeholder="请输入参数" required
+    <van-field value="{{ left }}" type="number" bind:input="onLeft" label="left" clearable placeholder="please input params" required
       border="{{ false }}" />
-    <van-field value="{{ bottom }}" type="number" label="下" bind:input="onBottom" clearable placeholder="请输入参数" required
+    <van-field value="{{ bottom }}" type="number" label="bottom" bind:input="onBottom" clearable placeholder="please input params" required
       border="{{ false }}" />
-    <van-field value="{{ right }}" type="number" label="右" bind:input="onRight" clearable placeholder="请输入参数" required
+    <van-field value="{{ right }}" type="number" label="right" bind:input="onRight" clearable placeholder="please input params" required
       border="{{ false }}" />
   </van-cell-group>
-  <van-cell-group title="其他参数" border="{{ false }}">
-    <van-field label-class="small-label" input-class="big-width" bind:input="onConcentration" value="{{ concentration }}" label="试管浓度" clearable
-      placeholder="依次输入，空格分隔" required border="{{ false }}">
+  <van-cell-group title="other params" border="{{ false }}">
+    <van-field label-class="small-label" input-class="big-width" bind:input="onConcentration" value="{{ concentration }}" label="concentration" clearable
+      placeholder="please dividing with space" required border="{{ false }}">
     </van-field>
   </van-cell-group>
   <view class="control-btn">
-    <van-button custom-class="right-margin" bindtap="retake">重拍</van-button>
-    <van-button custom-class="left-margin" type="primary" bindtap="uploadPic" loading="{{uploadloading}}">确定
+    <van-button custom-class="right-margin" bindtap="retake">remake</van-button>
+    <van-button custom-class="left-margin" type="primary" bindtap="uploadPic" loading="{{uploadloading}}">confirm
     </van-button>
   </view>
   <van-toast id="van-toast" />

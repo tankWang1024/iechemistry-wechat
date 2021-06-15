@@ -15,10 +15,10 @@ Page({
     picUrl: "",
     imageid: 0,
     number: "",
-    top: 0.8333,
-    right: 0.8,
-    left: 0.2,
-    bottom: 0.5,
+    top: 0.6,
+    right: 0.6,
+    left: 0.4,
+    bottom: 0.8,
     concentration: "",
     uploadloading: false,
     rotate: 0
@@ -111,23 +111,23 @@ Page({
     console.log("上传")
     let validateArr = [
       {
-        label: "试管个数",
+        label: "tube number",
         prop: "number"
       },
       {
-        label: "分割参数：上 ",
+        label: "dividing params:top ",
         prop: "top"
       },
       {
-        label: "分割参数：左 ",
+        label: "dividing params:left ",
         prop: "left"
       },
       {
-        label: "分割参数：下 ",
+        label: "dividing params:bottom ",
         prop: "bottom"
       },
       {
-        label: "分割参数：右 ",
+        label: "dividing params:right ",
         prop: "right"
       },
     ]
@@ -135,7 +135,7 @@ Page({
     if (this.validateNull(validateArr)) {
       var that = this
       Toast.loading({
-        message: '图片上传中...',
+        message: 'image uploading...',
         duration: 0,
         forbidClick: true,
       });
@@ -154,11 +154,11 @@ Page({
         success(res) {
           console.log(res)
           if(res.statusCode!=200){
-            Notify({ type: 'danger', message: '图片上传失败，请重试' });
+            Notify({ type: 'danger', message: 'upload failed' });
             Toast.clear()
             return
           }
-          Notify({ type: 'success', message: '图片上传成功' });
+          Notify({ type: 'success', message: 'upload success' });
           let data = JSON.parse(res.data)
           let image = data.image
           that.setData({
@@ -168,7 +168,7 @@ Page({
           requestData = that.varTransfer()
           console.log(requestData)
           Toast.loading({
-            message: '结果解析中...',
+            message: 'analysing...',
             duration: 0,
             forbidClick: true,
           });
@@ -176,7 +176,7 @@ Page({
             console.log(res)
             Toast.clear()
             if(res.code==1){
-              Notify({ type: 'success', message: res.message+"，即将跳转" });
+              Notify({ type: 'success', message: res.message+", jumping" });
               setTimeout(()=>{
                 wx.navigateTo({
                   url: '/pages/index/prediction/prediction_details/index?obj='+JSON.stringify(res),
@@ -187,13 +187,13 @@ Page({
             }
           }).catch(()=>{
             Toast.clear()
-            Notify({ type: 'danger', message: "服务器错误，请稍后再试" });
+            Notify({ type: 'danger', message: "server error , retry later." });
           })
         },
         fail(err) {
           console.log(err)
           Toast.clear()
-          Notify({ type: 'danger', message: '图片上传失败，请重试' });
+          Notify({ type: 'danger', message: 'upload failed' });
         }
       })
     }

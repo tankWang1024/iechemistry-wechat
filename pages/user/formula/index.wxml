@@ -1,17 +1,17 @@
 <!--pages/user/formula/index.wxml-->
-<view class="title"><text>我的公式</text>
-  <van-button type="primary" size='small' bindtap="addformula">新增公式</van-button>
+<view class="title"><text>My Formulas</text>
+  <van-button type="primary" size='small' bindtap="addformula">new</van-button>
 </view>
-<van-empty wx:if="{{list.length==0}}" description="您还没有公式" />
+<van-empty wx:if="{{list.length==0}}" description="No Formulas" />
 <view wx:if="{{list.length>0}}" style="touch-action: none" wx:for="{{list}}">
   <van-swipe-cell right-width="{{ '65' }}">
     <van-cell-group>
-      <van-cell title="名称" value="{{item.remark}}" border="{{ false }}" />
+      <van-cell title="Name" value="{{item.remark}}" border="{{ false }}" />
       <!-- <van-cell title="公式" value="{{item.template}}" border="{{ false }}" /> -->
-      <van-field value="{{item.template}}" label="公式" readonly border="{{ false }}" />
+      <van-field value="{{item.template}}" label="Formula" readonly border="{{ false }}" />
     </van-cell-group>
     <view class="right-btn" slot="right">
-      <view class="delete-button" data-fid='{{item.id}}' bindtap="deleteone">删除</view>
+      <view class="delete-button" data-fid='{{item.id}}' bindtap="deleteone">delete</view>
       <!-- <view class="select-button" data-fid='{{item.id}}' bindtap="selectone">选择</view> -->
     </view>
   </van-swipe-cell>

@@ -6,7 +6,7 @@
 <cover-image src="/assets/takephoto.png" bindtap="takePhoto" class="cover-take-photo"></cover-image>
 <van-overlay show="{{show}}" z-index="8" bind:click="onClickHide">
   <view class="wrapper">
-    <van-button plain hairline size="small" bindtap="uploadImg" type="primary">图片上传</van-button>
+    <van-button plain hairline size="small" bindtap="uploadImg" type="primary">Upload Image</van-button>
   </view>
 </van-overlay>
 <!-- <view>预览</view>

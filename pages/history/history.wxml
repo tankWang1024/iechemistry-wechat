@@ -1,12 +1,12 @@
 <!--pages/history/history.wxml-->
-<van-empty wx:if="{{history.length==0}}" description="暂无历史记录" />
+<van-empty wx:if="{{history.length==0}}" description="no history data found" />
 <van-cell-group wx:if="{{history.length>0}}" border="{{ false }}">
   <view wx:for="{{history}}" wx:key="index" style="position:relative;border-bottom:6rpx solid #ebedf0;">
-    <van-field value="{{ item.formula_remark }}" center readonly clearable label="使用公式" placeholder="" border="{{ false }}" >
+    <van-field value="{{ item.formula_remark }}" center readonly clearable label="formula" placeholder="" border="{{ false }}" >
     </van-field>
-    <van-field value="{{'a:' + item.a + ',b:'+ item.b + ',R²:'+ item.r2}}" readonly center clearable label="参数" placeholder="" border="{{ false }}" is-link bindtap="tap" data-field="{{item}}">
+    <van-field value="{{'a:' + item.a + ',b:'+ item.b + ',R²:'+ item.r2}}" readonly center clearable label="params" placeholder="" border="{{ false }}" is-link bindtap="tap" data-field="{{item}}">
     </van-field>
-    <van-field value="{{ item.create_time }}" readonly center clearable label="时间" placeholder="" border="{{ false }}">
+    <van-field value="{{ item.create_time }}" readonly center clearable label="date&time" placeholder="" border="{{ false }}">
     </van-field>
   </view>
 

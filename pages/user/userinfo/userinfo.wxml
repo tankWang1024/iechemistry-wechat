@@ -1,15 +1,15 @@
 <view>
-  <van-cell-group title="个人信息">
+  <van-cell-group title="Personal Info">
     <view>
-      <van-field disabled  model:value="{{ id }}" center clearable="false" label="用户ID" placeholder="" border="{{ false }} ">
+      <van-field disabled  model:value="{{ id }}" center clearable="false" label="user ID" placeholder="" border="{{ false }} ">
       </van-field>
-      <van-field  model:value="{{ phone }}" center clearable label="电话" placeholder="" border="{{ false }}">
+      <van-field  model:value="{{ phone }}" center clearable label="phone" placeholder="" border="{{ false }}">
       </van-field>
-      <van-field  model:value="{{ name }}" center clearable label="用户名" placeholder="" border="{{ false }}">
+      <van-field  model:value="{{ name }}" center clearable label="username" placeholder="" border="{{ false }}">
       </van-field>
-      <van-field  model:value="{{ wxid }}" center clearable label="微信号" placeholder="" border="{{ false }}">
+      <van-field  model:value="{{ wxid }}" center clearable label="wechat ID" placeholder="" border="{{ false }}">
       </van-field>
-      <van-button size="large" bind:click="updateUser" type="primary">修改</van-button>
+      <van-button size="large" bind:click="updateUser" type="primary">Edit</van-button>
     </view>
   </van-cell-group>
 </view>

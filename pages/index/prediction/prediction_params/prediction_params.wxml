@@ -7,23 +7,23 @@
 
 <view class="{{rotate==1?'rotate':'norotate'}}">
   <van-cell-group border="{{ false }}">
-    <van-field value="{{ number }}" type="number" bind:input="onNumber" label="试管个数" clearable placeholder="请输入个数" required
+    <van-field value="{{ number }}" type="number" bind:input="onNumber" label="tube number" clearable placeholder="please input tube number" required
       border="{{ false }}" />
   </van-cell-group>
-  <van-cell-group title="分割参数" border="{{ false }}">
-    <van-field label-class="small-label" bind:input="onTop" input-class="big-width" value="{{ top }}" type="number" label="上"
-      clearable placeholder="请输入参数" required border="{{ false }}">
+  <van-cell-group title="dividing params" border="{{ false }}">
+    <van-field label-class="small-label" bind:input="onTop" input-class="big-width" value="{{ top }}" type="number" label="top"
+      clearable placeholder="please input param" required border="{{ false }}">
     </van-field>
-    <van-field value="{{ left }}" type="number" bind:input="onLeft" label="左" clearable placeholder="请输入参数" required
+    <van-field value="{{ left }}" type="number" bind:input="onLeft" label="left" clearable placeholder="please input param" required
       border="{{ false }}" />
-    <van-field value="{{ bottom }}" type="number" label="下" bind:input="onBottom" clearable placeholder="请输入参数" required
+    <van-field value="{{ bottom }}" type="number" label="bottom" bind:input="onBottom" clearable placeholder="please input param" required
       border="{{ false }}" />
-    <van-field value="{{ right }}" type="number" label="右" bind:input="onRight" clearable placeholder="请输入参数" required
+    <van-field value="{{ right }}" type="number" label="right" bind:input="onRight" clearable placeholder="please input param" required
       border="{{ false }}" />
   </van-cell-group>
   <view class="control-btn">
-    <van-button custom-class="right-margin" bindtap="retake">重拍</van-button>
-    <van-button custom-class="left-margin" type="primary" bindtap="uploadPic" loading="{{uploadloading}}">预测
+    <van-button custom-class="right-margin" bindtap="retake">retake</van-button>
+    <van-button custom-class="left-margin" type="primary" bindtap="uploadPic" loading="{{uploadloading}}">predict
     </van-button>
   </view>
   <van-toast id="van-toast" />

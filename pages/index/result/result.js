@@ -109,44 +109,44 @@ Page({
   uploadPic() {
     console.log("上传")
     let validateArr = [{
-        label: "实验名",
+        label: "exp name",
         prop: "remark"
       },
       {
-        label: "试管个数",
+        label: "tube number",
         prop: "number"
       },
       {
-        label: "分割参数：ymin ",
+        label: "segement param:ymin ",
         prop: "top"
       },
       {
-        label: "分割参数：xmin ",
+        label: "segement param:xmin ",
         prop: "left"
       },
       {
-        label: "分割参数：ymax ",
+        label: "segement param:ymax ",
         prop: "bottom"
       },
       {
-        label: "分割参数：xmax ",
+        label: "segement param:xmax",
         prop: "right"
       },
       {
-        label: "试管浓度",
+        label: "concentration",
         prop: "concentration",
         validate(data) {
           console.log(data)
           return true
         },
-        msg: "试管浓度填写不符合规定"
+        msg: "concentration is wrong"
       },
     ]
     var requestData = {}
     if (this.validateNull(validateArr)) {
       var that = this
       Toast.loading({
-        message: '图片上传中...',
+        message: 'image uploading...',
         duration: 0,
         forbidClick: true,
       });
@@ -165,11 +165,11 @@ Page({
         success(res) {
           console.log(res)
           if(res.statusCode!=200){
-            Notify({ type: 'danger', message: '图片上传失败，请重试' });
+            Notify({ type: 'danger', message: 'image uploading failed,retry...' });
             Toast.clear()
             return
           }
-          Notify({ type: 'success', message: '图片上传成功' });
+          Notify({ type: 'success', message: 'image uploading successfully' });
           let data = JSON.parse(res.data)
           let image = data.image
           that.setData({
@@ -179,14 +179,14 @@ Page({
           requestData = that.varTransfer()
           console.log(requestData)
           Toast.loading({
-            message: '结果解析中...',
+            message: 'analyzing...',
             duration: 0,
             forbidClick: true,
           });
           $ajax("/process", "POST", requestData).then(res => {
             Toast.clear()
             if(res.code==1){
-              Notify({ type: 'success', message: res.message+"，即将跳转" });
+              Notify({ type: 'success', message: res.message+"，jumping.." });
               setTimeout(()=>{
                 wx.navigateTo({
                   url: '/pages/index/analyse/analyse?imageid='+that.data.imageid,
@@ -197,13 +197,13 @@ Page({
             }
           }).catch(()=>{
             Toast.clear()
-            Notify({ type: 'danger', message: "服务器错误，请稍后再试" });
+            Notify({ type: 'danger', message: "server error, retry.." });
           })
         },
         fail(err) {
           console.log(err)
           Toast.clear()
-          Notify({ type: 'danger', message: '图片上传失败，请重试' });
+          Notify({ type: 'danger', message: 'image uploading failed, retry..' });
         }
       })
     }
@@ -224,7 +224,7 @@ Page({
       current: this.data.picUrl, //当前显示图片的链接 默认为第一张
       urls: urls, //需要预览的图片链接列表
       success: function (e) {
-        console.log("成功")
+        console.log("success")
       },
       fail(err) {
         console.log(err)

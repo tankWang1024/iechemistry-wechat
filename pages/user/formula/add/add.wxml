@@ -1,27 +1,27 @@
 <!--pages/user/formula/add/add.wxml-->
-<van-cell-group title="新增公式">
-  <van-cell title="函数次数" required is-link value="{{power?power:'请选择'}}" bind:click="selecttMethod" arrow-direction="down" />
+<van-cell-group title="new formula">
+  <van-cell title="power" required is-link value="{{power?power:'please select'}}" bind:click="selecttMethod" arrow-direction="down" />
   <van-popup show="{{ t_method_show }}" position="bottom" custom-style="height: 55%;" bind:close="onClosetMethod">
     <van-picker show-toolbar bind:cancel="onClosetMethod" bind:confirm="onConfirmtMethod" columns="{{ tcolumns }}"
-      title="函数次数" />
+      title="power" />
   </van-popup>
-  <van-field value="{{ a }}" bind:input="onAinput" required placeholder="请输入a值" clearable label="a" />
-  <van-field value="{{ b }}" bind:input="onBinput" required placeholder="请输入b值" clearable label="b" />
-  <van-field value="{{ c }}" bind:input="onCinput"  clearable placeholder="请输入c值" label="c" />
-  <van-field value="{{ d }}" bind:input="onDinput"  clearable placeholder="请输入d值" label="d" />
+  <van-field value="{{ a }}" bind:input="onAinput" required placeholder="please input a" clearable label="a" />
+  <van-field value="{{ b }}" bind:input="onBinput" required placeholder="please input b" clearable label="b" />
+  <van-field value="{{ c }}" bind:input="onCinput"  clearable placeholder="please input c" label="c" />
+  <van-field value="{{ d }}" bind:input="onDinput"  clearable placeholder="please input d" label="d" />
 
-  <van-field  value="{{ r2 }}" type="number" bind:input="onR2input" label="R^2" placeholder="请输入R^2值" required border="{{ false }}" />
-  <van-cell title="x" required is-link value="{{x?x:'请选择'}}" bind:click="selectXMethod" arrow-direction="down" />
+  <van-field  value="{{ r2 }}" type="number" bind:input="onR2input" label="R^2" placeholder="please input square R" required border="{{ false }}" />
+  <van-cell title="x" required is-link value="{{x?x:'please select'}}" bind:click="selectXMethod" arrow-direction="down" />
   <van-popup show="{{ x_method_show }}" required position="bottom" custom-style="height: 55%;" bind:close="onCloseXMethod">
     <van-picker show-toolbar bind:cancel="onCloseXMethod" bind:confirm="onConfirmXMethod" columns="{{ xcolumns }}"
       title="x" />
   </van-popup>
-  <van-cell title="y" required is-link value="{{y?y:'请选择'}}" bind:click="selectMethod" arrow-direction="down" />
+  <van-cell title="y" required is-link value="{{y?y:'please select'}}" bind:click="selectMethod" arrow-direction="down" />
   <van-popup show="{{ method_show }}" position="bottom" custom-style="height: 55%;" bind:close="onCloseMethod">
     <van-picker show-toolbar bind:cancel="onCloseMethod" bind:confirm="onConfirmMethod" columns="{{ ycolumns }}"
       title="y" />
   </van-popup>
 </van-cell-group>
 <view style="margin-bottom:36rpx;"></view>
-<van-button type="primary" bindtap="addform" size="large">确定</van-button>
+<van-button type="primary" bindtap="addform" size="large">confirm</van-button>
 <van-notify id="van-notify" />

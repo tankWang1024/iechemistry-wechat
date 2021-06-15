@@ -5,11 +5,11 @@ const {
   $ajax
 } = require("../../../utils/util")
 const double = {
-  浓度: ['R', 'G', 'B','(G+R)/B', 'G/B','R/B', 'R/G', 'S/V', 'H/S' , 'H', 'S', 'V'],
+  concentration: ['R', 'G', 'B','(G+R)/B', 'G/B','R/B', 'R/G', 'S/V', 'H/S' , 'H', 'S', 'V'],
   // 福建: ['福州', '厦门', '莆田', '三明', '泉州'],
 };
 const doubleMap = {
-  "浓度": "C"
+  "concentration": "C"
 }
 Page({
   /**
@@ -21,7 +21,7 @@ Page({
     method: "",
     axiosx: "",
     axiosy: "",
-    params_msg: "请选择",
+    params_msg: "please select",
     method_show: false,
     params_show: false,
     resultData: [],
@@ -30,7 +30,7 @@ Page({
         className: 'column1',
       },
       {
-        values: double['浓度'],
+        values: double['concentration'],
         className: 'column2',
         defaultIndex: 0,
       },
@@ -63,16 +63,16 @@ Page({
     if (!this.data.method) {
       Notify({
         type: 'warning',
-        message: '拟合方法不能为空'
+        message: 'Fitting method cannot be empty'
       });
     } else if (!this.data.axiosx) {
       Notify({
         type: 'warning',
-        message: '拟合参数不能为空'
+        message: 'Fitting parameter cannot be empty'
       });
     } else {
       Toast.loading({
-        message: '解析中...',
+        message: 'Under analysis...',
         forbidClick: true,
         duration:0
       });
@@ -86,7 +86,7 @@ Page({
         console.log(res)
         Toast.clear()
         if(res.code==1){
-          Notify({ type: 'success', message: '解析成功，即将跳转' });
+          Notify({ type: 'success', message: 'Successful analysis, about to jump' });
           setTimeout(()=>{
             wx.navigateTo({
               url: `/pages/index/details/details?linear=${res.linear.url}&scatter=${res.scatter.url}`,

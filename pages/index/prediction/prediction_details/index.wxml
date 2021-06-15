@@ -2,10 +2,8 @@
 <view class="ana-pic">
   <van-image width="700rpx" height="525rpx" src="{{url}}" />
 </view>
-<view class="formula">
-  <view><label style="width:16rpx; font-weight:800;">公式:</label> y = {{formula.a}} x + {{formula.b}}</view>
-  <view>R²: {{formula.r2}}</view>
-</view>
-<view class="iecExpPredict">
-  <view><label style="width:16rpx; font-weight:800;">拟合的浓度:</label>{{iecExpPredict.concentration}}</view>
-</view>
+<van-cell-group title="result">
+    <van-cell title="Formula" value="y = {{formula.a}} x + ({{formula.b}})" />
+    <van-cell title="R²" value="{{formula.r2}}" />
+    <van-cell title="new Concentration" value="{{iecExpPredict.concentration}}" />
+  </van-cell-group>

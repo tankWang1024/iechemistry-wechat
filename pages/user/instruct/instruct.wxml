@@ -1,24 +1,22 @@
 <view>
-  <van-cell-group title="功能说明">
-    <van-cell title="主页" value="拍照、上传图像后进行拟合、预测" />
-    <van-cell title="历史" value="查看预测的历史记录等" />
-    <van-cell title="用户" value="用户的信息、历史数据信息、使用说明等" />
-    <van-cell value="拍照时, 若未开启陀螺仪(已开启旋转锁定),则只能试管口和手机都朝上进行拍照;若开启陀螺仪,镜头朝前方进行拍照（不要俯拍）。请保证手机镜头不要朝着地面俯拍(不然拍出来的照片无法区分方向)" icon="fire" color="#ee0a24">
+  <van-cell-group title="Function description">
+    <van-cell title="index" value="taking photo, upload image, and then fitting, predicting" />
+    <van-cell title="history" value="View predicting history, etc" />
+    <van-cell title="user" value="User information, historical data information, instructions, etc" />
+    <van-cell value="When taking photos, if the gyroscope is not turned on (the rotation lock has been turned on), you can only take photos with the tube port and mobile phone facing up; If the gyroscope is turned on, take a picture with the lens facing forward (do not shoot from above). Please make sure that the lens of the mobile phone does not face down to the ground" icon="fire" color="#ee0a24">
       <view slot="??">
         <view class="van-cell-text">拍照</view>
           <van-tag type="danger">注意</van-tag>
       </view>
     </van-cell>
   </van-cell-group>
-
   <view class="border-gray"></view>
-
-  <van-cell-group title="参数填写说明">
-    <van-cell title="实验名" value="英文、数字、下划线, 不要用中文,其余符号,防治出错" />
-    <van-cell title="试管个数" value="填写图片上试管的个数" />
-    <van-cell title="分割参数" value="以图像左上角为原点,参数'上'即裁剪图像距离原单个试管图像最上边的距离的百分比,其它参数同理之" />
-    <van-cell title="试管浓度" value="使用空格隔开,有多少个试管就填多少个浓度" />
-    <van-cell title="拟合方法" value="目前只支持了SVM的线性拟合y=ax+b" />
-    <van-cell title="拟合参数" value="y目前只支持浓度C，x目前只支持RGB和其变种" />
+  <van-cell-group title="Description of parameter filling">
+    <van-cell title="Exp name" value="English, numbers, underscores, do not use Chinese, to prevent errors" />
+    <van-cell title="Tube numbers" value="Fill in the number of tubes in the picture" />
+    <van-cell title="Segment params" value="Take the upper left corner of the image as the origin, and the parameter 'up' is the percentage of the distance between the clipping image and the top edge of the original single tube image. Other parameters are the same." />
+    <van-cell title="Tube concentration" value="Use space to separate, and fill as many tubes as you have" />
+    <van-cell title="Fitting method" value="At present, it only supports the linear regretion fitting of SVM : y = ax + b" />
+    <van-cell title="Fitting params" value="At present, parameter Y only supports concentration C, and parameter x only supports RGB and its variants" />
   </van-cell-group>
 </view>

@@ -19,7 +19,7 @@ Page({
     let formulaid = e.currentTarget.dataset.fid
     Dialog.confirm({
         // title: '',
-        message: '确认删除公式？',
+        message: 'confirm delete？',
       })
       .then(() => {
         // on confirm

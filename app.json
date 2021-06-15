@@ -23,7 +23,7 @@
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "智能荧光分析",
+    "navigationBarTitleText": "Fluorescence Analysis",
     "navigationBarTextStyle": "black"
   },
   "sitemapLocation": "sitemap.json",
@@ -31,19 +31,19 @@
     "list": [
       {
         "pagePath": "pages/index/index",
-        "text": "主页",
+        "text": "Experiment",
         "iconPath": "/assets/index.png",
         "selectedIconPath": "/assets/index2.png"
       },
       {
         "pagePath": "pages/history/history",
-        "text": "历史",
+        "text": "History",
         "iconPath": "/assets/history.png",
         "selectedIconPath": "/assets/history2.png"
       },
       {
         "pagePath": "pages/user/user",
-        "text": "用户",
+        "text": "User",
         "iconPath": "/assets/user.png",
         "selectedIconPath": "/assets/user2.png"
       }

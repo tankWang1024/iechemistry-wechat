@@ -1,39 +1,39 @@
 <!--pages/user/statisic/statisic.wxml-->
 <view>
-  <van-cell-group title="最近实验">
+  <van-cell-group title="recent experiments">
     <van-cell title="{{latestExp1}}" value="{{latestExp1_time}}" />
     <van-cell title="{{latestExp2}}" value="{{latestExp2_time}}" />
   </van-cell-group>
   <view class="border-green"></view>
-  <van-cell-group title="一共进行了：" value-class="value-custom-class">
+  <van-cell-group title="experiment journey:" value-class="value-custom-class">
     <van-cell title="">
       <view slot="title">
-        <view class="van-cell-text">{{expNum}}组实验</view>
+        <view class="van-cell-text"><b style="color:red">{{expNum}}</b> groups of experiments</view>
       </view>
     </van-cell>
     <van-cell title="">
       <view slot="title">
-        <view class="van-cell-text">{{objectNum}}根试管</view>
+        <view class="van-cell-text"><b style="color:red">{{objectNum}}</b> test tubes</view>
       </view>
     </van-cell>
     <van-cell title="">
       <view slot="title">
-        <view class="van-cell-text">总共上传了{{imageNum}}组实验图片</view>
+        <view class="van-cell-text"><b style="color:red">{{imageNum}}</b> groups of experimental pictures were uploaded</view>
       </view>
     </van-cell>
     <van-cell title="">
       <view slot="title">
-        <view class="van-cell-text">{{regionsNum}}个选区</view>
+        <view class="van-cell-text">There are <b style="color:red;">{{regionsNum}}</b> constituencies</view>
       </view>
     </van-cell>
     <van-cell title="">
       <view slot="title">
-        <view class="van-cell-text">第一次实验是{{first_time}}</view>
+        <view class="van-cell-text">The first experiment was <b style="color:red;">{{first_time}}</b></view>
       </view>
     </van-cell>
     <van-cell title="">
       <view slot="title">
-        <view class="van-cell-text">截至目前,你已经做了很久实验了,加油哦!</view>
+        <view class="van-cell-text">Up to now, you have been doing experiments for a long time. Come on!</view>
       </view>
     </van-cell>
   </van-cell-group>
