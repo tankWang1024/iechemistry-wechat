@@ -20,13 +20,13 @@ Page({
     })
 
   },
-gopredict: function(){
+gofit: function(){
   // /pages/index/result/result?picUrl='+picUrl+'&rotate='+rotate
   wx.navigateTo({
     url: '/pages/index/result/result?picUrl='+ this.data.picUrl + '&rotate='+ this.data.rotate
   })
 },
-gofit: function(){
+gopredict: function(){
   wx.navigateTo({
     url: '/pages/index/prediction/prediction_select/index?picUrl='+this.data.picUrl+'&rotate='+this.data.rotate
   })
