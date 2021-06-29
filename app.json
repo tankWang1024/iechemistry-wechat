@@ -22,12 +22,13 @@
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
+    "navigationBarBackgroundColor": "#a1bdd4",
     "navigationBarTitleText": "Fluorescence Analysis",
     "navigationBarTextStyle": "black"
   },
   "sitemapLocation": "sitemap.json",
   "tabBar": {
+    "backgroundColor": "#a1bdd4",
     "list": [
       {
         "pagePath": "pages/index/index",

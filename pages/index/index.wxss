@@ -3,29 +3,21 @@ page{
   height: 100%;
 }
 .container{
-  /* padding-top: 150rpx; */
+  display: block;
   height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: end;
+  background-image: url("http://image.ruankun.xyz/iechemistry-index-bg.png");
+  background-size: 100% 100%;
 }
-
-/* .userinfo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: #aaa;
+.btng {
+  position:absolute;
+  bottom:0;
+  width:100%;
+  height:300rpx;   /* 底部高度 */
 }
-
-.userinfo-avatar {
-  overflow: hidden;
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
+.btn {
+  display: block;
+  height: 100%;
+  width: 49%;
 }
-
-.usermotto {
-  margin-top: 200px;
-} */

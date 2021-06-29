@@ -3,8 +3,8 @@
   <view>
     <text class="h1">iechemistry</text>
     <view class="border-lightgray"></view>
-    <text class="h3">智能电化学平台,基于python flask的电化学实验分析处理平台</text>
-    <text class="h1 bold">电化学智能平台 子模块</text>
+    <text class="h3">智能荧光传感平台,基于python flask的电化学实验分析处理平台</text>
+    <text class="h1 bold">智能荧光传感平台 子模块</text>
     <view class="border-lightgray"></view>
     <text class="list">· 荧光分析</text>
     <text class="list">· 图像、数据的预处理</text>

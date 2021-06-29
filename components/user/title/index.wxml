@@ -7,7 +7,7 @@
     </view>
   <!-- <van-image show-menu-by-longpress="true" round width="150rpx" fit="cover" height="150rpx" src="{{avatar}}" /> -->
   <view class="welcome-content">
-    欢迎你 <open-data type="userNickName"></open-data>
+    welcome, <open-data type="userNickName"></open-data>
   </view>
 </view>
 </view>

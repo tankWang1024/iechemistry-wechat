@@ -1,5 +1,5 @@
 {
-  "navigationBarTitleText": "个人信息",
+  "navigationBarTitleText": "personal info",
   "usingComponents": {
     "van-cell": "@vant/weapp/cell/index",
     "van-cell-group": "@vant/weapp/cell-group/index",

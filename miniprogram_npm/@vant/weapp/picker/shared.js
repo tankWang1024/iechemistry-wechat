@@ -7,11 +7,11 @@ exports.pickerProps = {
   showToolbar: Boolean,
   cancelButtonText: {
     type: String,
-    value: '取消',
+    value: 'cancel',
   },
   confirmButtonText: {
     type: String,
-    value: '确认',
+    value: 'confirm',
   },
   visibleItemCount: {
     type: Number,

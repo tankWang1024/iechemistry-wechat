@@ -1,11 +1,16 @@
 <!--pages/index/menu/menu.wxml-->
-<van-grid column-num="3" clickable>
-  <van-grid-item use-slot url="{{'/pages/index/result/result?picUrl='+picUrl+'&rotate='+rotate}}">
-    <image style="width: 90rpx; height: 90rpx;" src="/assets/fit.png" />
-    <text style="color:#646566;font-size:24rpx;line-height: 1.5; margin-top: 16rpx;">fit</text>
-  </van-grid-item>
-  <van-grid-item use-slot url="{{'/pages/index/prediction/prediction_select/index?picUrl='+picUrl+'&rotate='+rotate}}">
-    <image style="width: 90rpx; height: 90rpx;" src="/assets/prediction.png" />
-    <text style="color:#646566;font-size:24rpx;line-height: 1.5; margin-top: 16rpx;">prediction</text>
-  </van-grid-item>
-</van-grid>
+<view class="container">
+  <view class="predict" bindtap="gopredict">
+    <view class="fit" catchtap="gofit"></view>
+  </view>
+  <!-- <van-grid column-num="3" clickable>
+    <van-grid-item use-slot url="{{'/pages/index/result/result?picUrl='+picUrl+'&rotate='+rotate}}">
+      <image style="width: 90rpx; height: 90rpx;" src="/assets/fit.png" />
+      <text style="color:#646566;font-size:24rpx;line-height: 1.5; margin-top: 16rpx;">fit</text>
+    </van-grid-item>
+    <van-grid-item use-slot url="{{'/pages/index/prediction/prediction_select/index?picUrl='+picUrl+'&rotate='+rotate}}">
+      <image style="width: 90rpx; height: 90rpx;" src="/assets/prediction.png" />
+      <text style="color:#646566;font-size:24rpx;line-height: 1.5; margin-top: 16rpx;">prediction</text>
+    </van-grid-item>
+  </van-grid> -->
+</view>

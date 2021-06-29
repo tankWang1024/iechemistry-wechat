@@ -20,7 +20,17 @@ Page({
     })
 
   },
-
+gopredict: function(){
+  // /pages/index/result/result?picUrl='+picUrl+'&rotate='+rotate
+  wx.navigateTo({
+    url: '/pages/index/result/result?picUrl='+ this.data.picUrl + '&rotate='+ this.data.rotate
+  })
+},
+gofit: function(){
+  wx.navigateTo({
+    url: '/pages/index/prediction/prediction_select/index?picUrl='+this.data.picUrl+'&rotate='+this.data.rotate
+  })
+},
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

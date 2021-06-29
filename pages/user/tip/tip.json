@@ -1,5 +1,5 @@
 {
-  "navigationBarTitleText": "打赏作者",
+  "navigationBarTitleText": "reward authors",
   "usingComponents": {
     "van-image": "@vant/weapp/image/index"
   }

@@ -1,1 +1,26 @@
 /* pages/index/menu/menu.wxss */
+page{
+  height: 100%;
+}
+.container{
+  display: block;
+  height: 100%;
+  flex-direction: row;
+  justify-content: end;
+  background-image: url("http://image.ruankun.xyz/iechemistry-menu-bg.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.predict {
+  display: block;
+  height: 100%;
+  width: 100%;
+  /* background-color: blue; */
+  /* opacity: 0.5; */
+}
+.fit {
+  display: block;
+  height: 50%;
+  width: 100%;
+  /* background-color: green; */
+}
