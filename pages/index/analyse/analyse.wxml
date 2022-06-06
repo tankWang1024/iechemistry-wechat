@@ -1,23 +1,23 @@
 <!--pages/index/analyse/analyse.wxml-->
 <view style="position:relative;min-height:100%;">
-  <row resultData="{{resultData}}" />
-  <view style="margin-top:36rpx;"></view>
-  <van-cell-group>
-    <van-cell title="fitting method" is-link value="{{method?method:'please select'}}" bind:click="selectMethod" arrow-direction="down" />
-    <van-popup show="{{ method_show }}" position="bottom" custom-style="height: 55%;" bind:close="onCloseMethod">
-      <van-picker show-toolbar bind:cancel="onCloseMethod" bind:confirm="onConfirmMethod" columns="{{ columns }}"
-        title="select fitting method" />
-    </van-popup>
-    <van-cell title="fitting parameters" is-link value="{{params_msg}}" bind:click="selectParams" arrow-direction="down" />
-    <van-popup show="{{ params_show }}" position="bottom" custom-style="height: 55%;" bind:close="onCloseParams">
-      <van-picker show-toolbar bind:cancel="onCloseParams" bind:confirm="onConfirmParams" columns="{{ two_columns }}"
-        title="select fitting parameters" bind:change="onChangeParams" />
-    </van-popup>
-  </van-cell-group>
-  <view style="height:136rpx;"></view>
-  <view class="btn-position">
-    <van-button custom-class="btn-position" type="primary" bind:click="toShow" size="large">confirm</van-button>
-  </view>
+    <row resultData="{{resultData}}" />
+    <view style="margin-top:36rpx;"></view>
+    <van-cell-group>
+        <van-field label-class="small-label" input-class="big-width" bind:input="onConcentration" value="{{ concentration_range }}" label="concentration" clearable placeholder="please dividing with space" required border="{{ false }}">
+        </van-field>
+        <van-cell title="fitting method" is-link value="{{method?method:'please select'}}" bind:click="selectMethod" arrow-direction="down" />
+        <van-popup show="{{ method_show }}" position="bottom" custom-style="height: 55%;" bind:close="onCloseMethod">
+            <van-picker show-toolbar bind:cancel="onCloseMethod" bind:confirm="onConfirmMethod" columns="{{ columns }}" title="select fitting method" />
+        </van-popup>
+        <van-cell title="fitting parameters" is-link value="{{params_msg}}" bind:click="selectParams" arrow-direction="down" />
+        <van-popup show="{{ params_show }}" position="bottom" custom-style="height: 55%;" bind:close="onCloseParams">
+            <van-picker show-toolbar bind:cancel="onCloseParams" bind:confirm="onConfirmParams" columns="{{ two_columns }}" title="select fitting parameters" bind:change="onChangeParams" />
+        </van-popup>
+    </van-cell-group>
+    <view style="height:136rpx;"></view>
+    <view class="btn-position">
+        <van-button custom-class="btn-position" type="primary" bind:click="toShow" size="large">confirm</van-button>
+    </view>
 </view>
 <van-notify id="van-notify" />
 <van-toast id="van-toast" />

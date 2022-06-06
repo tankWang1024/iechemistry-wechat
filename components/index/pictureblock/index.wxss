@@ -1,8 +1,8 @@
 /* components/index/pictureblock/index.wxss */
 .pic-block {
   padding: 15rpx;
-  margin-left: 18rpx;
-  width: 310rpx;
+  margin-left: 5rpx;
+  width: 342rpx;
   display: inline-block;
   border-radius: 14rpx;
   background: #ffffff;
@@ -33,3 +33,4 @@
   width: 100%;
   font-size: 26rpx;
 }
+

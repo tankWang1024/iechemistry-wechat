@@ -2,14 +2,14 @@
 <view class="pic-block">
   <view class="pic-view">
     <!-- <van-image width="150rpx" height="100" fit="contain" src="{{result.object_url}}" /> -->
-    <van-image width="150rpx" height="100" fit="contain" src="{{result.region_url}}" />
+    <van-image width="140rpx" height="100" fit="fill" src="{{result.region_url}}" />
   </view>
   <van-cell-group>
     <van-field input-class="input-class" value="{{ result.rgb }}" readonly border="{{ false }}"
-      bind:change="onChange" label="RGB" title-width="50rpx" size="mini"	/>
+      bind:change="onChange" label="RGB" title-width="50rpx" size="mini" label-clas="bolck-label"		/>
   </van-cell-group>
   <van-cell-group>
-    <van-field input-class="input-class" value="{{ result.hsv }}" readonly border="{{ false }}"
-      bind:change="onChange" label="HSV" title-width="50rpx" size="mini"	/>
+    <van-field input-class="input-class" value="{{ result.hsv }}" readonly border="{{ false }}" 
+      bind:change="onChange" label="HSV" title-width="50rpx" size="mini" label-clas="bolck-label"	/>
   </van-cell-group>
 </view>
