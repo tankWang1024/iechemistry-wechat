@@ -62,6 +62,14 @@ Page({
         }).then(res => {
             console.log('/processresult结果: ')
             console.log(res.datas)
+            let resData = res.datas
+            // 后端传的rgb，hsv值实为bgr，vsh
+            for (let item of resData) {
+                let strArr = item.rgb.split(" ")
+                item.rgb = strArr[2] + " " + strArr[1] + " " + strArr[0]
+                strArr = item.hsv.split(" ")
+                item.hsv = strArr[2] + " " + strArr[1] + " " + strArr[0]
+            }
             this.setData({
                 resultData: res.datas
             })

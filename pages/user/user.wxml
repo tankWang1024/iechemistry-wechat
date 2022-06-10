@@ -5,7 +5,7 @@
     <van-cell title="statistic" icon="star-o" is-link url="/pages/user/statisic/statisic" />
     <van-cell title="formulas" icon="edit" is-link url="/pages/user/formula/index" />
     <van-cell title="personal info" icon="user-o" is-link url="/pages/user/userinfo/userinfo" />
-    <van-cell title="reward developers" icon="balance-o" is-link url="/pages/user/tip/tip" />
+    <!-- <van-cell title="reward developers" icon="balance-o" is-link url="/pages/user/tip/tip" /> -->
     <van-cell title="instructions" icon="question-o" is-link url="/pages/user/instruct/instruct" />
     <van-cell center="true" title="feedback" icon="service-o" is-link link-type="contact"><button open-type="contact"
         class="contact">??</button> </van-cell>
