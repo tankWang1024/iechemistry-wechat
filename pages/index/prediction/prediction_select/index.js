@@ -27,7 +27,17 @@ Page({
   getData() {
     $ajax("/formula", "GET").then(res => {
       res.data.map(item => {
-        item.format = `${item.a}x${item.b},R^2=${item.r2}`
+        //   xy变换了，需要改a,b
+        item.b = -1 * item.b / item.a
+        item.b = item.b.toFixed(4)
+        item.a = 1 / item.a
+        item.a = item.a.toFixed(4)
+        //   +b
+        if(item.b>=0){
+            return item.format = `${item.a}x+${item.b},R^2=${item.r2}`
+        }else{
+            return item.format = `${item.a}x${item.b},R^2=${item.r2}`
+        }
       })
 
       console.log(res)

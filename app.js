@@ -1,7 +1,9 @@
 // app.js
 App({
   data:{
-    baseUrl:"https://ruankun.natappvip.cc",
+    // baseUrl:"https://ruankun.natappvip.cc",
+    // baseUrl:"https://holepredict.sicau.edu.cn/iechemistry",
+    baseUrl:"http://10.137.0.11:9876",
     avatar:"",
     nickname:""
   },

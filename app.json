@@ -8,8 +8,6 @@
     "pages/user/user",
     "pages/user/feedback/feedback",
     "pages/user/statisic/statisic",
-    "pages/user/tip/tip",
-    "pages/user/userinfo/userinfo",
     "pages/index/result/result",
     "pages/index/takePhoto/takePhoto",
     "pages/index/analyse/analyse",
@@ -23,7 +21,7 @@
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#a1bdd4",
-    "navigationBarTitleText": "Fluorescence Analysis",
+    "navigationBarTitleText": "Intelligent Analysis",
     "navigationBarTextStyle": "black"
   },
   "sitemapLocation": "sitemap.json",

@@ -185,7 +185,8 @@ Page({
             }else{
               Notify({ type: 'warning', message: res.message });
             }
-          }).catch(()=>{
+          }).catch((e)=>{
+              console.log(e)
             Toast.clear()
             Notify({ type: 'danger', message: "server error , retry later." });
           })

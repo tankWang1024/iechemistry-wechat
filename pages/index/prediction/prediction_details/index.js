@@ -19,6 +19,11 @@ Page({
     let that=  this
     let res = JSON.parse(data)
     console.log(res)
+    // a b变换
+    res.formula.b = -1 * res.formula.b / res.formula.a
+    res.formula.b = res.formula.b.toFixed(4)
+    res.formula.a = 1 / res.formula.a
+    res.formula.a = res.formula.a.toFixed(4)
     this.setData({
       formula:res.formula,
       iecExpPredict:res.iecExpPredict

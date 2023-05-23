@@ -7,7 +7,7 @@ page{
   height: 100%;
   flex-direction: row;
   justify-content: end;
-  background-image: url("http://image.ruankun.xyz/iechemistry-index-bg.png");
+  background-image: url("http://image.ruankun.xyz/iechemistry-index-bg3.jpg");
   background-size: 100% 100%;
 }
 .btng {

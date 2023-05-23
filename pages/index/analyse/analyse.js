@@ -13,7 +13,7 @@ const doubleMap = {
 }
 
 // const FitCollect = ["LeastSquares", "Ridge", "Lasso", "LassoLars", "BayesianRidge", "SVM","DecisionTree", "KNN","RandomForest", "SGD"]
-const FitCollect = ["LeastSquares", "Ridge", "Lasso", "LassoLars", "BayesianRidge", "SVM"]
+const FitCollect = ["Least Squares", "Ridge", "Lasso", "Lasso Lars", "Bayesian Ridge", "SVM"]
 Page({
     /**
      * 页面的初始数据

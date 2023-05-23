@@ -3,7 +3,7 @@
     <row resultData="{{resultData}}" />
     <view style="margin-top:36rpx;"></view>
     <van-cell-group>
-        <van-field label-class="small-label" input-class="big-width" bind:input="onConcentration" value="{{ concentration_range }}" label="tube select" clearable placeholder="please dividing with space" required border="{{ false }}">
+        <van-field label-class="small-label" input-class="big-width" bind:input="onConcentration" value="{{ concentration_range }}" label="tube select" clearable placeholder="please dividing with -" required border="{{ false }}">
         </van-field>
         <van-cell title="fitting method" is-link value="{{method?method:'please select'}}" bind:click="selectMethod" arrow-direction="down" />
         <van-popup show="{{ method_show }}" position="bottom" custom-style="height: 55%;" bind:close="onCloseMethod">
